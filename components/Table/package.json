@@ -1,0 +1,50 @@
+{
+  "name": "@devtools-ds/table",
+  "version": "0.130.0",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist",
+  "repository": "https://github.com/intuit/devtools-ds",
+  "author": "Tyler Krupicka github@tylerkrupicka.com",
+  "contributors": [
+    "Tyler Krupicka github@tylerkrupicka.com"
+  ],
+  "license": "MIT",
+  "sideEffects": [
+    "*.css",
+    "dist/esm/index.js"
+  ],
+  "scripts": {
+    "clean": "ds clean",
+    "build": "ds build",
+    "dev": "ds dev",
+    "storybook": "ds storybook start",
+    "start": "ds build --watch",
+    "test": "ds test",
+    "lint": "ds lint",
+    "size": "ds size"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.7.2",
+    "@design-systems/utils": "2.12.0",
+    "@devtools-ds/themes": "link:../../packages/themes",
+    "clsx": "1.1.0",
+    "use-resize-observer": "6.1.0"
+  },
+  "devDependencies": {
+    "@types/color": "3.0.1",
+    "color": "3.1.3"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.6"
+  },
+  "files": [
+    "dist",
+    "src",
+    "!*.snippet.*",
+    "!*theme.*",
+    "!*.test.*",
+    "!__snapshots__",
+    "!__tests__"
+  ]
+}

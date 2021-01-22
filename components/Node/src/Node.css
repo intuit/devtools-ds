@@ -1,0 +1,32 @@
+.node {
+  font-family: Menlo, monospace;
+  color: @theme textColor;
+}
+
+.tag {
+  color: @theme tagColor;
+}
+
+.name {
+  color: @theme nameColor;
+}
+
+.key {
+  color: @theme keyColor;
+}
+
+.value {
+  color: @theme valueColor;
+}
+
+.comment {
+  * {
+    color: @theme commentColor;
+  }
+}
+
+.docType {
+  * {
+    color: @theme docTypeColor;
+  }
+}

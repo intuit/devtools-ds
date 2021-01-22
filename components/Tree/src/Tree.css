@@ -1,0 +1,68 @@
+.tree {
+  width: 100%;
+  font-family: Menlo, monospace;
+}
+
+/* Indent each row in the tree */
+.item {
+  list-style: outside none none;
+}
+
+/* Remove padding from the unordered list */
+.group {
+  margin: 0;
+  padding: 0;
+  list-style: outside none none;
+
+  /* Responsible for the highlight and focus colors in the row */
+  .label {
+    cursor: default;
+    line-height: 1.5;
+    width: 100%;
+    display: inline-block;
+    outline: none;
+    padding-left: 5px;
+
+    .arrow {
+      color: rgb(110, 110, 110);
+    }
+
+    &:focus {
+      background-color: @theme focusColor;
+      color: @theme focusTextColor;
+
+      &.focusWhite {
+        * {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .label.hover {
+    &:hover:not(:focus) {
+      background-color: @theme hoverColor;
+      border-radius: @theme hoverRadius;
+    }
+  }
+}
+
+/* The expand/collapse arrow character */
+.arrow {
+  display: inline-block;
+  margin-right: 5px;
+  user-select: none;
+  transform: rotateZ(0deg);
+  position: relative;
+  bottom: 0.1em;
+  transition: transform 0.1s ease-in-out;
+
+  &.open {
+    transform: rotateZ(90deg);
+    bottom: 0;
+  }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}

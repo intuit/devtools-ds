@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Console It matches the snapshot 1`] = `
+<div>
+  <div
+    class="console firefox light"
+  >
+    <div
+      class="resultsScrollWrapper"
+    >
+      <ul
+        class="results"
+      />
+    </div>
+    <div
+      class="inputWrapper"
+    >
+      <svg
+        aria-hidden="true"
+        class="icon inline"
+        fill="currentColor"
+        focusable="false"
+        viewBox="0 0 17 30"
+      >
+        <path
+          d="M2.021 0l14.491 13.923c.326.336.488.695.488 1.077s-.162.741-.488 1.077L2.022 30 .14 27.846 13.448 15 0 2.154 2.021 0z"
+        />
+      </svg>
+      <input
+        aria-label="Enter an expression"
+        class="input"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;

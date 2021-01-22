@@ -1,0 +1,34 @@
+{
+  "plugins": [
+    [
+      "npm",
+      {
+        "setRcToken": false
+      }
+    ],
+    "released",
+    "first-time-contributor",
+    "all-contributors"
+  ],
+  "labels": [
+    {
+      "name": "new-component",
+      "description": "A new component has been added to the design system",
+      "changelogTitle": "🧩 New Component",
+      "releaseType": "minor"
+    },
+    {
+      "name": "breaking-minor",
+      "description": "Major version zero (0.y.z) is for initial development. Anything MAY change at any time.",
+      "changelogTitle": "🔨 Breaking Minor Change",
+      "releaseType": "minor"
+    },
+    {
+      "name": "dependency-update",
+      "changelogTitle": "🔩 Dependency Updates",
+      "releaseType": "none"
+    }
+  ],
+  "githubApi": "https://github.com/api/v3",
+  "githubGraphqlApi": "https://github.com/api"
+}

@@ -1,0 +1,88 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import logo from "../../../.storybook/devtools-ds-logo.svg";
+
+<Meta title="Getting Started/Welcome" />
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div style={{ marginLeft: "auto", marginRight: "auto" }}>
+  <img src={logo} alt="Devtools DS Logo" width="200px" padding="40px" />
+</div>
+
+<br />
+<br />
+<br />
+
+# 🎉 Welcome
+
+Devtools DS is a project for people who love building developer tools.
+When you do any front-end development, you inevitably become an expert at navigating the "devtools" or "inspector" panel in your favorite browser.
+Browser devtools have become impressive tools capable of displaying, modifying, and debugging every aspect of a web page.
+
+This project is an attempt to make that same powerful debugging experience available to any JS project.
+We're building out the UI components, packages, and templates needed to build your own custom "devtools" -- so that you can build a great developer experience for your users.
+It's a big project, but we've made some great progress so far!
+
+# 🔧 Philosophy
+
+With each of the components in this system we focus on:
+
+- Ease of use (API)
+- Performance (limiting external dependencies)
+- Accessibility (using established UI patterns when possible)
+
+Each of these goals comes before 100% visual accuracy with the existing browser devtools.
+If you see anything that can be improved, we'd love to have you contribute!
+
+Devtools DS is built using [Design Systems CLI](https://github.com/intuit/design-systems-cli) and [PostCSS Themed](https://github.com/intuit/postcss-themed) and acts as a showcase for both projects.
+Most of the technical architecture for the project is accomplished using those tools.
+We recommend checking them out if you are looking to build your own design system!
+
+# 🔎 Using this Storybook
+
+This [Storybook](https://storybook.js.org/) is our interactive documentation site for the design system.
+In the left navigation bar, you'll find links to each of the different components and packages we have built.
+In the top bar, you can use some of the "addons" we have available.
+The most important one is the "theme" addon, which will have the logo of a browser.
+You can use that dropdown menu to change what theme all of the components use.
+
+To find out more about Storybook, [explore the documentation](https://storybook.js.org/docs/react/get-started/introduction).
+
+# 🤝 Contributing
+
+Whether it's improving documentation, adding a new component, or suggesting an issue that will help us improve, all contributions are welcome!
+
+Top reasons to contribute:
+
+<ul>
+  <li>
+    <span aria-hidden style={{ marginRight: 8 }}>
+      😍
+    </span>{" "}
+    Empower others to build high quality browser devtools experiences
+  </li>
+  <li>
+    <span aria-hidden style={{ marginRight: 8 }}>
+      🎓
+    </span>{" "}
+    Learn design system development
+  </li>
+  <li>
+    <span aria-hidden style={{ marginRight: 8 }}>
+      ⏳
+    </span>{" "}
+    Help maintainers prioritize impactful work
+  </li>
+</ul>
+
+Here are some ideas for contributions:
+
+- New components
+- New themes (We'd love to see some Safari themes eventually)
+- Accessibility improvements
+- New browser extension templates
+- Support for new frameworks like Vue, Angular, or Svelte

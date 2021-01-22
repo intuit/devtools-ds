@@ -1,0 +1,12 @@
+{
+  "extends": "@design-systems",
+  "rules": {
+    "no-underscore-dangle": ["error", { "allow": ["_SLOT_"] }],
+    "@typescript-eslint/no-empty-function": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "max-params": 0,
+    "jest/no-if": 0,
+    "jsdoc/check-param-names": 0,
+    "@typescript-eslint/ban-types": 0
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "noVersionWarning": true,
+  "build": {
+    "cssImport": true,
+    "cssMain": "main"
+  }
+}

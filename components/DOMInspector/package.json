@@ -1,0 +1,46 @@
+{
+  "name": "@devtools-ds/dom-inspector",
+  "version": "0.130.0",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist",
+  "repository": "https://github.com/intuit/devtools-ds",
+  "author": "Tyler Krupicka github@tylerkrupicka.com",
+  "contributors": [
+    "Tyler Krupicka github@tylerkrupicka.com"
+  ],
+  "license": "MIT",
+  "sideEffects": [
+    "*.css",
+    "dist/esm/index.js"
+  ],
+  "scripts": {
+    "clean": "ds clean",
+    "build": "ds build",
+    "dev": "ds dev",
+    "storybook": "ds storybook start",
+    "start": "ds build --watch",
+    "test": "ds test",
+    "lint": "ds lint",
+    "size": "ds size"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.7.2",
+    "@devtools-ds/node": "link:../Node",
+    "@devtools-ds/themes": "link:../../packages/themes",
+    "@devtools-ds/tree": "link:../Tree",
+    "clsx": "1.1.0"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.6"
+  },
+  "files": [
+    "dist",
+    "src",
+    "!*.snippet.*",
+    "!*theme.*",
+    "!*.test.*",
+    "!__snapshots__",
+    "!__tests__"
+  ]
+}

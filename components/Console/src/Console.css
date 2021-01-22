@@ -1,0 +1,105 @@
+.console {
+  width: 100%;
+  font-family: Menlo, monospace;
+  line-height: 1.5;
+  color: @theme textColor;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  font-family: Menlo, monospace;
+  line-height: 1.5;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  color: @theme inputColor;
+  margin-left: 4px;
+}
+
+.error {
+  background-color: @theme errorBackgroundColor;
+  border-top: 1px solid @theme errorBorderColor;
+
+  & .icon {
+    color: @theme errorIconColor;
+  }
+
+  .resultText {
+    color: @theme errorTextColor;
+  }
+}
+
+.warning {
+  background-color: @theme warningBackgroundColor;
+  border-top: 1px solid @theme warningBorderColor;
+
+  & .icon {
+    color: @theme warningIconColor;
+  }
+
+  .resultText {
+    color: @theme warningTextColor;
+  }
+}
+
+.input:focus {
+  border: none;
+  outline: none;
+}
+
+.inputWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid @theme dividerColor;
+  padding-left: 8px;
+}
+
+.icon {
+  box-sizing: border-box;
+  padding: 1px 0;
+  margin-top: 3px;
+  height: 11px;
+  width: 11px;
+}
+
+.inputWrapper .icon {
+  margin-top: 0;
+}
+
+.icon-focus {
+  color: @theme iconFocusColor;
+}
+
+.resultWrapper {
+  border-top: 1px solid @theme dividerColor;
+}
+
+.resultLine {
+  padding-left: 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.resultText,
+.expressionText {
+  margin-left: 8px;
+}
+
+.resultsScrollWrapper {
+  height: 100%;
+  overflow: auto;
+}
+
+.results {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}

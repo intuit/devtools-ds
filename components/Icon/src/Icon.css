@@ -1,0 +1,9 @@
+/* Make the icon inherit surrounding text properties. */
+.inline {
+  /* Prevent the icon from shrinking inside a flex container. */
+  flex-shrink: 0;
+  /* Scale the icon to match the font-size of the parent element. */
+  width: auto;
+  height: 1em;
+  vertical-align: top;
+}

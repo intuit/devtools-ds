@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    // Monorepo support
+    "baseUrl": ".",
+    "paths": {
+      "@devtools-ds/*": ["components/*/src", "packages/*/src"]
+    }
+  }
+}

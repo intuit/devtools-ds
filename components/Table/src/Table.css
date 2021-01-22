@@ -1,0 +1,84 @@
+.table {
+  width: 100%;
+  table-layout: fixed;
+  font-family: sans-serif;
+  font-size: 11px;
+  border-collapse: collapse;
+  color: @theme textColor;
+
+  &:last-child {
+    border-bottom: 1px solid @theme borderColor;
+  }
+}
+
+.table-head {
+  background-color: @theme headBackgroundColor;
+  text-align: left;
+}
+
+.cell-head {
+  padding: 5px;
+  position: relative;
+  border: 1px solid @theme borderColor;
+  font-weight: 400;
+  min-width: 40px;
+
+  .content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .resize {
+    position: absolute;
+    top: 0;
+    right: -4px;
+    width: 7px;
+    cursor: col-resize;
+    user-select: none;
+
+    &.active {
+      cursor: inherit;
+    }
+  }
+
+  &:last-of-type {
+    .resize {
+      display: none;
+    }
+  }
+}
+
+.cell {
+  padding: 5px;
+  border-right: 1px solid @theme borderColor;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  &:first-child {
+    border-left: 1px solid @theme borderColor;
+  }
+}
+
+.row {
+  outline: none;
+
+  &:nth-child(even) {
+    background-color: @theme stripeColor;
+  }
+
+  &.interactive {
+    &:hover {
+      background-color: @theme rowHoverColor;
+    }
+
+    &:focus {
+      background-color: @theme rowHoverColor;
+    }
+
+    &[aria-selected="true"] {
+      background-color: @theme rowSelectedColor;
+      color: white;
+    }
+  }
+}

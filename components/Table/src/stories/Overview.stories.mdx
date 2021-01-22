@@ -1,0 +1,54 @@
+import {
+  Meta,
+  Description,
+  Title,
+  Canvas,
+  Story,
+} from "@storybook/addon-docs/blocks";
+import { Version } from "@doc-blocks/version";
+import { ShieldRow } from "@doc-blocks/shield-row";
+
+import notes from "../../README.md";
+import { version } from "../../package.json";
+
+<Meta title="Components/Table/Overview" parameters={{ notes }} />
+
+<Title>@devtools-ds/table</Title>
+
+---
+
+<ShieldRow>
+  <Version
+    current={version}
+    url="https://github.com/intuit/devtools-ds/tree/master/components/Table/CHANGELOG.md"
+  />
+</ShieldRow>
+
+<Description />
+
+<br />
+
+## Usage
+
+The `Table` component is an HTML Table styled after the network inspector in Chrome and Firefox.
+
+<Canvas>
+  <Story id="components-table-features--basic-usage" />
+</Canvas>
+
+### Selecting Rows
+
+You can use the `selected` and `onSelected` props to track which row is selected.
+Adding these props will enable hover and focus styles.
+
+<Canvas>
+  <Story id="components-table-features--selected-row" />
+</Canvas>
+
+### Resizing
+
+Each column is user-resizable, and the `Table` will automatically fill the space of its container as needed.
+
+<Canvas>
+  <Story id="components-table-features--in-container" />
+</Canvas>

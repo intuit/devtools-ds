@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "lib": ["es6", "es2017", "dom", "es2019"],
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "downlevelIteration": true
+  }
+}

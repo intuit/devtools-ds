@@ -1,0 +1,32 @@
+{
+  "name": "@devtools-ds/docs",
+  "version": "0.130.0",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist",
+  "repository": "https://github.com/intuit/devtools-ds",
+  "author": "Tyler Krupicka github@tylerkrupicka.com",
+  "contributors": [
+    "Tyler Krupicka github@tylerkrupicka.com"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "clean": "ds clean",
+    "build": "ds build",
+    "start": "ds build --watch",
+    "storybook": "ds storybook start",
+    "test": "ds test",
+    "lint": "ds lint",
+    "size": "ds size"
+  },
+  "files": [
+    "dist",
+    "src",
+    "!*.test.*",
+    "!__snapshots__",
+    "!__tests__"
+  ],
+  "dependencies": {
+    "@babel/runtime": "~7.11.2"
+  }
+}

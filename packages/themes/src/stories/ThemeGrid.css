@@ -1,0 +1,44 @@
+.theme {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+.list {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0 20px 0 0;
+
+  .box {
+    border: 1px solid #adadad;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+  }
+
+  .label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+
+    h2,
+    h4 {
+      margin: 0;
+    }
+  }
+}

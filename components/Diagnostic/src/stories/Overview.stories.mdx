@@ -1,0 +1,50 @@
+import {
+  Meta,
+  Description,
+  Title,
+  Canvas,
+  Story,
+} from "@storybook/addon-docs/blocks";
+import { Version } from "@doc-blocks/version";
+import { ShieldRow } from "@doc-blocks/shield-row";
+
+import notes from "../../README.md";
+import { version } from "../../package.json";
+
+<Meta title="Components/Diagnostic/Overview" parameters={{ notes }} />
+
+<Title>@devtools-ds/Diagnostic</Title>
+
+---
+
+<ShieldRow>
+  <Version
+    current={version}
+    url="https://github.com/intuit/devtools-ds/tree/master/components/Diagnostic/CHANGELOG.md"
+  />
+</ShieldRow>
+
+<Description />
+
+<br />
+
+## Usage
+
+The `Diagnostic` takes a list of lines of code, and uses the `highlight` property to highlight a specific line.
+
+<Canvas>
+  <Story id="components-diagnostic-features--basic-usage" />
+</Canvas>
+
+You can use the `severity` property to indicate whether the issue is a "warning" or an "error".
+
+<Canvas>
+  <Story id="components-diagnostic-features--error" />
+</Canvas>
+
+If you are reporting errors from a [Language Server](https://code.visualstudio.com/api/language-extensions/language-server-extension-guide),
+you can use a utility function to convert the `vscode-languageserver-types`.
+
+<Canvas>
+  <Story id="components-diagnostic-features--language-server" />
+</Canvas>

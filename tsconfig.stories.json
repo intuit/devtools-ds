@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.build.json",
+  "include": ["packages/**/*", "components/**/*", "typings/**/*"],
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "noEmit": true,
+    // Monorepo support
+    "baseUrl": ".",
+    "paths": {
+      "@devtools-ds/*": ["components/*/src", "packages/*/src"]
+    }
+  }
+}

@@ -1,0 +1,69 @@
+import {
+  Meta,
+  Description,
+  Title,
+  Canvas,
+  Story,
+} from "@storybook/addon-docs/blocks";
+import { Version } from "@doc-blocks/version";
+import { ShieldRow } from "@doc-blocks/shield-row";
+
+import notes from "../../README.md";
+import { version } from "../../package.json";
+
+<Meta title="Components/Icon/Overview" parameters={{ notes }} />
+
+<Title>@devtools-ds/icon</Title>
+
+---
+
+<ShieldRow>
+  <Version
+    current={version}
+    url="https://github.com/intuit/devtools-ds/tree/master/components/Icon/CHANGELOG.md"
+  />
+</ShieldRow>
+
+<Description />
+
+<br />
+
+## Usage
+
+Icons are packaged as individual React components.
+
+```jsx
+import { AlertIcon } from "@devtools-ds/icon";
+
+// individual icon
+<AlertIcon />;
+```
+
+Each `Icon` component is a single SVG that with a customizable size and color.
+
+<Canvas>
+  <Story id="components-icon-features--basic-usage" />
+</Canvas>
+
+### Sizing
+
+There are three ways to size the icons: a size prop, inline, or with width and height. I've included an example of each below.
+
+```jsx
+import { AlertIcon } from '@devtools-ds/icon';
+
+// This will resize based on the four preset icon sizes used in the design system.
+<AlertIcon size="large"/>
+// This will inherit the fontSize attribute in order to work inline with text.
+<AlertIcon inline />
+// This will resize using normal SVG resize controls
+<AlertIcon width="30px" />
+```
+
+### Inline
+
+The `inline` property makes the icon behave like an icon font, inheriting size and color from the text around it.
+
+<Canvas>
+  <Story id="components-icon-features--inline" />
+</Canvas>

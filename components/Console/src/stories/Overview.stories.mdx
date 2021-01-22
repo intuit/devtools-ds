@@ -1,0 +1,87 @@
+import {
+  Meta,
+  Description,
+  Title,
+  Canvas,
+  Story,
+} from "@storybook/addon-docs/blocks";
+import { Version } from "@doc-blocks/version";
+import { ShieldRow } from "@doc-blocks/shield-row";
+
+import notes from "../../README.md";
+import { version } from "../../package.json";
+
+<Meta title="Components/Console/Overview" parameters={{ notes }} />
+
+<Title>@devtools-ds/console</Title>
+
+---
+
+<ShieldRow>
+  <Version
+    current={version}
+    url="https://github.com/intuit/devtools-ds/tree/master/components/Console/CHANGELOG.md"
+  />
+</ShieldRow>
+
+<Description />
+
+<br />
+
+## Usage
+
+By default, the `Console` component takes what you typed in and displays it as a string.
+
+<Canvas>
+  <Story id="components-console-features--basic-usage" />
+</Canvas>
+
+### Custom Expression Evaluation
+
+To make this more useful, you can provide your own function to evaluate the expression, and return a result.
+This example removes spaces from the entered expression.
+
+<Canvas>
+  <Story id="components-console-features--custom-function" />
+</Canvas>
+
+### Custom Rendering
+
+You can also customize how the results are displayed.
+Provide a component with a `result` property and it will be used instead.
+
+In browsers, the console displays results using an `ObjectInspector`.
+This package exports a `ConsoleResultInspector` component which mirrors that behavior using `@devtools-ds/object-inspector`.
+We don't set it as the default `resultComponent` for performance reasons; that would cause `@devtools-ds/object-inspector` to always be imported even if you don't use it.
+
+```tsx
+import {
+  Console,
+  ConsoleExpression,
+  ConsoleResultInspector,
+  ConsoleResultProps,
+} from "@devtools-ds/console";
+
+/** A custom result component */
+export const ConsoleResultCustom = ({ result }: ConsoleResultProps) => {
+  return <div>{result}</div>;
+};
+
+// Use the custom result component
+<Console resultComponent={ConsoleResultCustom} />
+
+// Use @devtools-ds/object-inspector
+<Console resultComponent={ConsoleResultInspector} />
+```
+
+<Canvas>
+  <Story id="components-console-features--custom-result" />
+</Canvas>
+
+### Controlled History
+
+You can also control and modify the history array yourself, using the `history` property.
+
+<Canvas>
+  <Story id="components-console-features--controlled" />
+</Canvas>

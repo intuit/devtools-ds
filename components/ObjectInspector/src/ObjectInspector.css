@@ -1,0 +1,61 @@
+.object-inspector {
+  width: 100%;
+  font-family: Menlo, monospace;
+  color: @theme textColor;
+}
+
+.object-label {
+  color: @theme labelColor;
+}
+
+.text {
+  color: @theme textColor;
+}
+
+.key {
+  color: @theme keyColor;
+}
+
+.value {
+  color: @theme valueColor;
+}
+
+.string {
+  color: @theme stringColor;
+}
+
+.regex {
+  color: @theme regexColor;
+}
+
+.error {
+  color: @theme errorColor;
+}
+
+.boolean {
+  color: @theme booleanColor;
+}
+
+.number {
+  color: @theme numberColor;
+}
+
+.undefined {
+  color: @theme undefinedColor;
+}
+
+.null {
+  color: @theme nullColor;
+}
+
+.function {
+  color: @theme functionColor;
+}
+
+.function-decorator {
+  color: @theme functionDecoratorColor;
+}
+
+.prototype {
+  color: @theme prototypeColor;
+}

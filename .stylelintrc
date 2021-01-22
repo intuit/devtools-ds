@@ -1,0 +1,6 @@
+{
+  "extends": ["@design-systems/stylelint-config"],
+  "rules": {
+    "function-calc-no-invalid": null
+  }
+}

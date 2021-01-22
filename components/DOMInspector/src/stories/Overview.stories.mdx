@@ -1,0 +1,46 @@
+import {
+  Meta,
+  Description,
+  Title,
+  Canvas,
+  Story,
+} from "@storybook/addon-docs/blocks";
+import { Version } from "@doc-blocks/version";
+import { ShieldRow } from "@doc-blocks/shield-row";
+
+import notes from "../../README.md";
+import { version } from "../../package.json";
+
+<Meta title="Components/DOM Inspector/Overview" parameters={{ notes }} />
+
+<Title>@devtools-ds/dom-inspector</Title>
+
+---
+
+<ShieldRow>
+  <Version
+    current={version}
+    url="https://github.com/intuit/devtools-ds/tree/master/components/DOMInspector/CHANGELOG.md"
+  />
+</ShieldRow>
+
+<Description />
+
+<br />
+
+## Usage
+
+The `DOMInspector` allows you to inspect an HTML DOM Element, similar to the "Inspector" panel in browser devtools.
+For basic usage, you just pass in a DOM Element to the `data` property.
+
+<Canvas>
+  <Story id="components-dom-inspector-features--basic-usage" />
+</Canvas>
+
+### Start Expanded
+
+You can specify an `expandLevel` to choose how many levels are open initially.
+
+<Canvas>
+  <Story id="components-dom-inspector-features--expanded" />
+</Canvas>

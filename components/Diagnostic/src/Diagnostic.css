@@ -1,0 +1,48 @@
+.diagnostic {
+  font-family: Menlo, monospace;
+  color: @theme textColor;
+}
+
+.icon {
+  font-size: 1.1em;
+}
+
+.iconError {
+  color: @theme errorIconColor;
+}
+
+.iconWarning {
+  color: @theme warningIconColor;
+}
+
+.message {
+  padding-left: 10px;
+  color: @theme messageColor;
+}
+
+.wrapper {
+  margin: 10px 0 0;
+}
+
+.wrapperError {
+  background-color: @theme errorBackgroundColor;
+}
+
+.wrapperWarning {
+  background-color: @theme warningBackgroundColor;
+}
+
+.line {
+  width: 100%;
+  display: block;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.lineError {
+  background-color: @theme errorBackgroundLineColor;
+}
+
+.lineWarning {
+  background-color: @theme warningBackgroundLineColor;
+}

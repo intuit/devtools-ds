@@ -1,0 +1,53 @@
+{
+  "name": "@devtools-ds/diagnostic",
+  "version": "0.130.0",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist",
+  "repository": "https://github.com/intuit/devtools-ds",
+  "author": "Tyler Krupicka github@tylerkrupicka.com",
+  "contributors": [
+    "Tyler Krupicka github@tylerkrupicka.com",
+    "Shelby Cohen Shelby_Cohen@intuit.com"
+  ],
+  "license": "MIT",
+  "sideEffects": [
+    "*.css",
+    "dist/esm/index.js"
+  ],
+  "scripts": {
+    "clean": "ds clean",
+    "build": "ds build",
+    "dev": "ds dev",
+    "storybook": "ds storybook start",
+    "start": "ds build --watch",
+    "test": "ds test",
+    "lint": "ds lint",
+    "size": "ds size"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.7.2",
+    "@devtools-ds/icon": "link:../Icon",
+    "@devtools-ds/themes": "link:../../packages/themes",
+    "@reach/auto-id": "0.12.1",
+    "@reach/visually-hidden": "0.12.0",
+    "clsx": "1.1.0",
+    "vscode-languageserver-types": "3.15.1"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.6"
+  },
+  "files": [
+    "dist",
+    "src",
+    "!*.snippet.*",
+    "!*theme.*",
+    "!*.test.*",
+    "!__snapshots__",
+    "!__tests__"
+  ],
+  "devDependencies": {
+    "@types/color": "3.0.1",
+    "color": "3.1.3"
+  }
+}

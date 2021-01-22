@@ -1,0 +1,64 @@
+{
+  "projectName": "devtools-ds",
+  "projectOwner": "design-systems",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "eslint",
+  "contributors": [
+    {
+      "login": "tkrupicka",
+      "name": "Tyler Krupicka",
+      "avatar_url": "https://github.com/avatars/u/3976?",
+      "profile": "https://github.com/tkrupicka",
+      "contributions": [
+        "a11y",
+        "bug",
+        "code",
+        "design",
+        "doc",
+        "example",
+        "infra",
+        "maintenance",
+        "test",
+        "tool"
+      ]
+    },
+    {
+      "login": "adierkens",
+      "name": "Adam Dierkens",
+      "avatar_url": "https://github.com/avatars/u/3981?",
+      "profile": "https://github.com/adierkens",
+      "contributions": [
+        "a11y",
+        "code",
+        "design",
+        "doc",
+        "example",
+        "infra",
+        "maintenance",
+        "platform",
+        "test",
+        "tool"
+      ]
+    },
+    {
+      "login": "scohen3",
+      "name": "Shelby Cohen",
+      "avatar_url": "https://github.com/avatars/u/7290?",
+      "profile": "https://github.com/scohen3",
+      "contributions": [
+        "a11y",
+        "code",
+        "design",
+        "doc",
+        "test"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}

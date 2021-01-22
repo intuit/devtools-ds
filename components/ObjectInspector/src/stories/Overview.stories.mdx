@@ -1,0 +1,37 @@
+import {
+  Meta,
+  Description,
+  Title,
+  Canvas,
+  Story,
+} from "@storybook/addon-docs/blocks";
+import { Version } from "@doc-blocks/version";
+import { ShieldRow } from "@doc-blocks/shield-row";
+
+import notes from "../../README.md";
+import { version } from "../../package.json";
+
+<Meta title="Components/Object Inspector/Overview" parameters={{ notes }} />
+
+<Title>@devtools-ds/object-inspector</Title>
+
+---
+
+<ShieldRow>
+  <Version
+    current={version}
+    url="https://github.com/intuit/devtools-ds/tree/master/components/ObjectInspector/CHANGELOG.md"
+  />
+</ShieldRow>
+
+<Description />
+
+<br />
+
+## Usage
+
+The `ObjectInspector` component displays JavaScript objects in an expandable tree view.
+
+<Canvas>
+  <Story id="components-object-inpsector-features--basic-usage" />
+</Canvas>

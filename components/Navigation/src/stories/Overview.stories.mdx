@@ -1,0 +1,47 @@
+import {
+  Meta,
+  Description,
+  Title,
+  Canvas,
+  Story,
+} from "@storybook/addon-docs/blocks";
+import { Version } from "@doc-blocks/version";
+import { ShieldRow } from "@doc-blocks/shield-row";
+
+import notes from "../../README.md";
+import { version } from "../../package.json";
+
+<Meta title="Components/Navigation/Overview" parameters={{ notes }} />
+
+<Title>@devtools-ds/navigation</Title>
+
+---
+
+<ShieldRow>
+  <Version
+    current={version}
+    url="https://github.com/intuit/devtools-ds/tree/master/components/Navigation/CHANGELOG.md"
+  />
+</ShieldRow>
+
+<Description />
+
+<br />
+
+## Usage
+
+The `Navigation` component allows you to construct a navigation bar with tabs, buttons, and dividers that help users navigate your devtools application.
+
+The `Navigation` component allows you to construct a navigation bar with tabs, buttons, and dividers that help users navigate your devtools application.
+
+<Canvas>
+  <Story id="components-navigation-features--basic-usage" />
+</Canvas>
+
+### Icons
+
+Icons are optional for tabs; the component will work fine without them.
+
+<Canvas>
+  <Story id="components-navigation-features--without-icons" />
+</Canvas>

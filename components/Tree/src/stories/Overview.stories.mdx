@@ -1,0 +1,75 @@
+import {
+  Meta,
+  Description,
+  Title,
+  Canvas,
+  Story,
+} from "@storybook/addon-docs/blocks";
+import { Version } from "@doc-blocks/version";
+import { ShieldRow } from "@doc-blocks/shield-row";
+
+import notes from "../../README.md";
+import { version } from "../../package.json";
+
+<Meta title="Components/Tree/Overview" parameters={{ notes }} />
+
+<Title>@devtools-ds/tree</Title>
+
+---
+
+<ShieldRow>
+  <Version
+    current={version}
+    url="https://github.com/intuit/devtools-ds/tree/master/components/Tree/CHANGELOG.md"
+  />
+</ShieldRow>
+
+<Description />
+
+<br />
+
+## Usage
+
+The `Tree` component is a keyboard accessible tree view.
+
+<Canvas>
+  <Story id="components-tree-features--basic-usage" />
+</Canvas>
+
+### Disable Hover
+
+In some uses, like `ObjectInspector`, the tree does not have a hover style. You can disable these by setting the `hover` prop to false.
+
+<Canvas>
+  <Story id="components-tree-features--without-hover" />
+</Canvas>
+
+### Default Open
+
+You can also specify whether a certain tree node starts open when rendered.
+
+<Canvas>
+  <Story id="components-tree-features--default-open" />
+</Canvas>
+
+### Events
+
+There are some event callbacks you can use when building a component around the `Tree`.
+
+#### onUpdate
+
+The `onUpdate` event lets you track the current open/closed state of the `Tree` node.
+We use this to change labels in the `ObjectInspector` component.
+
+<Canvas>
+  <Story id="components-tree-features--on-update" />
+</Canvas>
+
+#### onSelect
+
+The `onSelect` event lets you attach a callback when a tree node is currently selected using the mouse or keyboard.
+We also use this event in `ObjectInspector` to track which part of the object is currently selected.
+
+<Canvas>
+  <Story id="components-tree-features--on-select" />
+</Canvas>

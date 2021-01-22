@@ -1,0 +1,71 @@
+import { ComponentTheme } from "@devtools-ds/themes";
+import { firefox, chrome } from "@devtools-ds/themes";
+
+const ConsoleTheme = (): ComponentTheme => ({
+  firefox: {
+    light: {
+      textColor: firefox.light.textColor,
+      inputColor: firefox.light.purple01,
+      iconColor: firefox.light.textColor,
+      dividerColor: firefox.light.gray03,
+      iconFocusColor: firefox.light.blue03,
+      errorIconColor: firefox.light.error,
+      errorBorderColor: firefox.light.errorBorder,
+      errorBackgroundColor: firefox.light.errorBackground,
+      errorTextColor: firefox.light.errorText,
+      warningTextColor: firefox.light.warningText,
+      warningIconColor: firefox.light.warning,
+      warningBorderColor: firefox.light.warningBorder,
+      warningBackgroundColor: firefox.light.warningBackground,
+    },
+    dark: {
+      textColor: firefox.dark.textColor,
+      inputColor: firefox.dark.purple01,
+      iconColor: firefox.dark.textColor,
+      iconFocusColor: firefox.dark.blue03,
+      dividerColor: firefox.dark.gray02,
+      errorIconColor: firefox.dark.error,
+      errorBorderColor: firefox.dark.errorBorder,
+      errorBackgroundColor: firefox.dark.errorBackground,
+      errorTextColor: firefox.dark.errorText,
+      warningTextColor: firefox.dark.warningText,
+      warningIconColor: firefox.dark.warning,
+      warningBorderColor: firefox.dark.warningBorder,
+      warningBackgroundColor: firefox.dark.warningBackground,
+    },
+  },
+  chrome: {
+    light: {
+      textColor: chrome.light.textColor,
+      inputColor: chrome.light.textColor,
+      iconColor: chrome.light.blue03,
+      iconFocusColor: chrome.light.blue03,
+      dividerColor: chrome.light.gray03,
+      errorIconColor: chrome.light.error,
+      errorBorderColor: chrome.light.errorBorder,
+      errorBackgroundColor: chrome.light.errorBackground,
+      errorTextColor: chrome.light.errorText,
+      warningTextColor: chrome.light.warningText,
+      warningIconColor: chrome.light.warning,
+      warningBorderColor: chrome.light.warningBorder,
+      warningBackgroundColor: chrome.light.warningBackground,
+    },
+    dark: {
+      textColor: chrome.dark.textColor,
+      inputColor: chrome.dark.textColor,
+      iconColor: chrome.light.blue03,
+      iconFocusColor: chrome.light.blue03,
+      dividerColor: chrome.dark.gray04,
+      errorIconColor: chrome.dark.error,
+      errorBorderColor: chrome.dark.errorBorder,
+      errorBackgroundColor: chrome.dark.errorBackground,
+      errorTextColor: chrome.dark.errorText,
+      warningTextColor: chrome.dark.warningText,
+      warningIconColor: chrome.dark.warning,
+      warningBorderColor: chrome.dark.warningBorder,
+      warningBackgroundColor: chrome.dark.warningBackground,
+    },
+  },
+});
+
+export default ConsoleTheme;
