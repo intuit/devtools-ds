@@ -10,8 +10,6 @@
   <p>Components and tools for building browser devtools extensions, built on <a href="https://github.com/intuit/design-systems-cli">DS-CLI</a> and <a href="https://github.com/intuit/postcss-themed">PostCSS Themed</a>.</p>
 </div>
 
-
-
 ---
 
 <div align="center">
@@ -104,15 +102,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/tkrupicka"><img src="https://github.com/avatars/u/3976?" width="100px;" alt=""/><br /><sub><b>Tyler Krupicka</b></sub></a><br /><a href="#a11y-tkrupicka" title="Accessibility">️️️️♿️</a> <a href="https://github.com/design-systems/devtools-ds/issues?q=author%3Atkrupicka" title="Bug reports">🐛</a> <a href="https://github.com/design-systems/devtools-ds/commits?author=tkrupicka" title="Code">💻</a> <a href="#design-tkrupicka" title="Design">🎨</a> <a href="https://github.com/design-systems/devtools-ds/commits?author=tkrupicka" title="Documentation">📖</a> <a href="#example-tkrupicka" title="Examples">💡</a> <a href="#infra-tkrupicka" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-tkrupicka" title="Maintenance">🚧</a> <a href="https://github.com/design-systems/devtools-ds/commits?author=tkrupicka" title="Tests">⚠️</a> <a href="#tool-tkrupicka" title="Tools">🔧</a></td>
-    <td align="center"><a href="https://github.com/adierkens"><img src="https://github.com/avatars/u/3981?" width="100px;" alt=""/><br /><sub><b>Adam Dierkens</b></sub></a><br /><a href="#a11y-adierkens" title="Accessibility">️️️️♿️</a> <a href="https://github.com/design-systems/devtools-ds/commits?author=adierkens" title="Code">💻</a> <a href="#design-adierkens" title="Design">🎨</a> <a href="https://github.com/design-systems/devtools-ds/commits?author=adierkens" title="Documentation">📖</a> <a href="#example-adierkens" title="Examples">💡</a> <a href="#infra-adierkens" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-adierkens" title="Maintenance">🚧</a> <a href="#platform-adierkens" title="Packaging/porting to new platform">📦</a> <a href="https://github.com/design-systems/devtools-ds/commits?author=adierkens" title="Tests">⚠️</a> <a href="#tool-adierkens" title="Tools">🔧</a></td>
-    <td align="center"><a href="https://github.com/scohen3"><img src="https://github.com/avatars/u/7290?" width="100px;" alt=""/><br /><sub><b>Shelby Cohen</b></sub></a><br /><a href="#a11y-scohen3" title="Accessibility">️️️️♿️</a> <a href="https://github.com/design-systems/devtools-ds/commits?author=scohen3" title="Code">💻</a> <a href="#design-scohen3" title="Design">🎨</a> <a href="https://github.com/design-systems/devtools-ds/commits?author=scohen3" title="Documentation">📖</a> <a href="https://github.com/design-systems/devtools-ds/commits?author=scohen3" title="Tests">⚠️</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-enable -->
+<!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->

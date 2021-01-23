@@ -11,10 +11,10 @@
   "commitConvention": "eslint",
   "contributors": [
     {
-      "login": "tkrupicka",
+      "login": "tylerkrupicka",
       "name": "Tyler Krupicka",
-      "avatar_url": "https://github.com/avatars/u/3976?",
-      "profile": "https://github.com/tkrupicka",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5761061?v=4",
+      "profile": "https://github.com/tylerkrupicka",
       "contributions": [
         "a11y",
         "bug",
@@ -31,7 +31,7 @@
     {
       "login": "adierkens",
       "name": "Adam Dierkens",
-      "avatar_url": "https://github.com/avatars/u/3981?",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13004162?v=4",
       "profile": "https://github.com/adierkens",
       "contributions": [
         "a11y",
@@ -47,10 +47,10 @@
       ]
     },
     {
-      "login": "scohen3",
+      "login": "ShelbyCohen",
       "name": "Shelby Cohen",
-      "avatar_url": "https://github.com/avatars/u/7290?",
-      "profile": "https://github.com/scohen3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7768053?v=4",
+      "profile": "https://github.com/ShelbyCohen",
       "contributions": [
         "a11y",
         "code",
@@ -58,7 +58,7 @@
         "doc",
         "test"
       ]
-    }
+    },
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 6
 }
