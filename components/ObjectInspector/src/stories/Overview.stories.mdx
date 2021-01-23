@@ -33,5 +33,38 @@ import { version } from "../../package.json";
 The `ObjectInspector` component displays JavaScript objects in an expandable tree view.
 
 <Canvas>
-  <Story id="components-object-inpsector-features--basic-usage" />
+  <Story id="components-object-inspector-features--basic-usage" />
+</Canvas>
+
+### Default Open
+
+You can use the `expandLevel` prop to open the inspector to a specific level by default.
+
+<Canvas>
+  <Story id="components-object-inspector-features--default-open" />
+</Canvas>
+
+### Sorting Keys
+
+By default, the inspector mirrors the browser behavior and sorts keys. You can disable this with the sortKeys prop.
+
+<Canvas>
+  <Story id="components-object-inspector-features--disable-sorting" />
+</Canvas>
+
+### Removing Prototypes
+
+Similarly, you can disable object `prototypes` from being included.
+
+<Canvas>
+  <Story id="components-object-inspector-features--disable-prototypes" />
+</Canvas>
+
+### onSelect
+
+You can use the `onSelect` prop to get the `@devtools-ds/object-parser` AST node for the currently selected part of the object.
+This includes the `parent` of the node so everything should be traversable.
+
+<Canvas>
+  <Story id="components-object-inspector-features--on-select-callback" />
 </Canvas>

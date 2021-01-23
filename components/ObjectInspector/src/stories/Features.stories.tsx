@@ -1,142 +1,85 @@
 import React from "react";
-
+import { action } from "@storybook/addon-actions";
 import { ObjectInspector } from "../ObjectInspector";
 import notes from "../../README.md";
 
 export default {
-  title: "Components/Object Inspector/Features/Features",
+  title: "Components/Object Inspector/Features",
   parameters: { notes },
 };
 
-// Set up variables
 const testFunction = () => {
-  setTimeout(() => {}, 1000);
+  setTimeout(() => {}, 2000);
 };
-
-const array = ["one", "two", "three", "four"];
-
-const object = {
-  tyler: "krupicka",
-  adam: "dierkens",
-};
-
-const int8 = new Int8Array([21, 31]);
-
-const promisePending = new Promise(() => {});
 
 const promise = new Promise((resolve) => {
   resolve(42);
 });
 
-const promiseRejected = new Promise((resolve, reject) => {
-  reject(new Error("Rejected!"));
-});
+const map = new Map();
+map.set("foo", "bar");
 
-const myMap = new Map();
-// setting the values
-myMap.set("string", "string key");
-myMap.set({}, "object key");
-myMap.set(testFunction, "function key");
-myMap.set("object value", { test: "working" });
-myMap.set(42, 42);
+const set = new Set();
+set.add("test");
 
-const myWeakMap = new WeakMap();
-myWeakMap.set({}, 42);
-
-const myWeakSet = new WeakSet();
-myWeakSet.add({});
-
-const mySet = new Set();
-mySet.add(42);
-mySet.add({});
-mySet.add("testing");
-
-export const String = () => <ObjectInspector data="Hello, world" />;
-export const Boolean = () => <ObjectInspector data={false} />;
-export const Number = () => <ObjectInspector data={123456789} />;
-export const InfinityStory = () => <ObjectInspector data={Infinity} />;
-InfinityStory.story = {
-  name: "Infinity",
-};
-export const NaNStory = () => <ObjectInspector data={NaN} />;
-NaNStory.story = {
-  name: "NaN",
-};
-export const Null = () => <ObjectInspector data={null} />;
-export const DateStory = () => <ObjectInspector data={new Date()} />;
-DateStory.story = {
-  name: "Date",
-};
-export const RegExpStory = () => <ObjectInspector data={/[A-Z]/g} />;
-RegExpStory.story = {
-  name: "RegExp",
-};
-export const SymbolStory = () => <ObjectInspector data={Symbol("Hello")} />;
-SymbolStory.story = {
-  name: "Symbol",
-};
-export const Undefined = () => <ObjectInspector data={undefined} />;
-export const Function = () => <ObjectInspector data={testFunction} />;
-export const ArrayStory = () => <ObjectInspector data={array} />;
-ArrayStory.story = {
-  name: "Array",
+const data = {
+  string: "string",
+  boolean: true,
+  number: 100,
+  promise,
+  null: null,
+  map,
+  set,
+  function: testFunction,
+  error: new Error("You broke it"),
+  date: new Date(),
+  symbol: Symbol("foo"),
+  regex: /[A-Z]/g,
+  "test-undefined": undefined,
+  array: [
+    "fun",
+    {
+      object: {
+        nesting: true,
+      },
+    },
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    9,
+    10,
+  ],
+  object: {
+    working: "properly",
+    function: testFunction,
+  },
 };
 
-export const Int8ArrayStory = () => <ObjectInspector data={int8} />;
-Int8ArrayStory.story = {
-  name: "Int8Array",
-};
+export const BasicUsage = () => <ObjectInspector data={data} />;
 
-export const ErrorStory = () => (
-  <ObjectInspector data={new Error("Normal error")} />
+export const DefaultOpen = () => (
+  <ObjectInspector expandLevel={2} data={data} />
 );
-ErrorStory.story = {
-  name: "Error",
-};
-export const TypeErrorStory = () => (
-  <ObjectInspector data={new TypeError("Range error")} />
+
+export const DisableSorting = () => (
+  <ObjectInspector sortKeys={false} data={data} />
 );
-TypeErrorStory.story = {
-  name: "TypeError",
-};
-export const ObjectStory = () => <ObjectInspector data={object} />;
-ObjectStory.story = {
-  name: "Object",
-};
-export const PromiseStory = () => <ObjectInspector data={promise} />;
-PromiseStory.story = {
-  name: "Promise (Resolved)",
-};
 
-export const PromiseRejectedStory = () => (
-  <ObjectInspector data={promiseRejected} />
+export const DisablePrototypes = () => (
+  <ObjectInspector includePrototypes={false} data={data} />
 );
-PromiseRejectedStory.story = {
-  name: "Promise (Rejected)",
-};
 
-export const PromisePendingStory = () => (
-  <ObjectInspector data={promisePending} />
+export const FontInheritance = () => (
+  <div style={{ fontSize: `16px` }}>
+    <ObjectInspector sortKeys={false} data={data} />
+  </div>
 );
-PromisePendingStory.story = {
-  name: "Promise (Pending)",
-};
-export const MapStory = () => <ObjectInspector data={myMap} />;
-MapStory.story = {
-  name: "Map",
-};
 
-export const WeakMapStory = () => <ObjectInspector data={myWeakMap} />;
-WeakMapStory.story = {
-  name: "WeakMap",
-};
+export const OnSelectCallback = () => {
+  const onSelectAction = action("onSelect");
 
-export const SetStory = () => <ObjectInspector data={mySet} />;
-SetStory.story = {
-  name: "Set",
-};
-
-export const WeakSetStory = () => <ObjectInspector data={myWeakSet} />;
-WeakSetStory.story = {
-  name: "WeakSet",
+  return <ObjectInspector data={data} onSelect={onSelectAction} />;
 };
