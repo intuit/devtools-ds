@@ -7,14 +7,11 @@ const repo =
 
 const artifacts = JSON.parse(
   execSync(
-    `curl https://circleci.com/api/v1.1/project/github/${user}/${repo}/$CIRCLE_BUILD_NUM/artifacts?circle-token=$CIRCLE_TOKEN`,
+    `curl "https://circleci.com/api/v1.1/project/github/${user}/${repo}/$CIRCLE_BUILD_NUM/artifacts?circle-token=$CIRCLE_TOKEN"`,
     { encoding: "utf8" }
   )
 );
-console.log(
-  `curl https://circleci.com/api/v1.1/project/github/${user}/${repo}/${process.env.CIRCLE_BUILD_NUM}/artifacts?circle-token=${process.env.CIRCLE_TOKEN}`
-);
-console.log(artifacts);
+
 const urls = artifacts.filter((artifact) =>
   artifact.url.includes("index.html")
 );
