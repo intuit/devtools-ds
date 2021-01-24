@@ -28,7 +28,5 @@
       "changelogTitle": "🔩 Dependency Updates",
       "releaseType": "none"
     }
-  ],
-  "githubApi": "https://github.com/api/v3",
-  "githubGraphqlApi": "https://github.com/api"
+  ]
 }
