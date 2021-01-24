@@ -79,7 +79,7 @@ jobs:
           at: ~/design-system
       - run:
           name: PR Version Check
-          command: yarn auto pr-check --url $CIRCLE_BUILD_URL
+          command: yarn auto pr-check --pr $CHANGE_ID --url $CIRCLE_BUILD_URL
 
   unit-tests:
     <<: *defaults
