@@ -1,7 +1,7 @@
 {
   "name": "@devtools-ds/monorepo",
   "private": true,
-  "repository": "https://github.com/design-systems/devtools-ds",
+  "repository": "https://github.com/intuit/devtools-ds",
   "author": "Tyler Krupicka github@tylerkrupicka.com",
   "contributors": [
     "Tyler Krupicka github@tylerkrupicka.com"

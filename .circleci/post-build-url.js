@@ -11,6 +11,10 @@ const artifacts = JSON.parse(
     { encoding: "utf8" }
   )
 );
+console.log(
+  `curl https://circleci.com/api/v1.1/project/github/${user}/${repo}/${process.env.CIRCLE_BUILD_NUM}/artifacts?circle-token=${process.env.CIRCLE_TOKEN}`
+);
+console.log(artifacts);
 const urls = artifacts.filter((artifact) =>
   artifact.url.includes("index.html")
 );
