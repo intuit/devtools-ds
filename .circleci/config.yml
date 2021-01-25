@@ -57,7 +57,7 @@ jobs:
           paths:
             - .
 
-  documentation:
+  build-docs:
     <<: *defaults
     steps:
       - attach_workspace:
@@ -65,12 +65,33 @@ jobs:
       - run:
           name: Build Storybook
           command: yarn build:storybook
+
+  publish-docs-pr:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/design-system
       - store_artifacts:
           path: ./out
           destination: documentation
       - run:
           name: Post Link to storybook
           command: node ./.circleci/post-build-url.js
+
+  publish-docs-release:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/design-system
+      - run:
+        name: Install and configure dependencies
+        command: |
+          npm install -g --silent gh-pages@2.0.1
+          git config user.email "github@tylerkrupicka.com"
+          git config user.name "ci-build"
+      - run:
+          name: Deploy docs to gh-pages branch
+          command: yarn gh-pages --dist ./out
 
   pr-check:
     <<: *defaults
@@ -144,14 +165,31 @@ workflows:
           requires:
             - build
 
-      - documentation:
+      - build-docs:
           requires:
             - unit-tests
             - lint
 
+      - publish-docs-pr:
+          requires:
+            - build-docs
+          filters:
+            branches:
+              ignore:
+                - master
+
       - release:
           requires:
-            - documentation
+            - build-docs
+          filters:
+            branches:
+              only:
+                - master
+
+      - publish-docs-release:
+          requires:
+            - build-docs
+            - release
           filters:
             branches:
               only:
@@ -159,7 +197,7 @@ workflows:
 
       - size:
           requires:
-            - documentation
+            - build-docs
           filters:
             branches:
               ignore:
