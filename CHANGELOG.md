@@ -1,3 +1,17 @@
+# v0.130.3 (Sun Jan 24 2021)
+
+#### ⚠️ Pushed to `master`
+
+- set npmrc token ([@tylerkrupicka](https://github.com/tylerkrupicka))
+- `@devtools-ds/docs`, `@devtools-ds/storybook-theme-addon`, `@devtools-ds/storybook-utils`
+  - stop docs packages from publishing ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### Authors: 1
+
+- Tyler Krupicka ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+---
+
 # (Sun Jan 24 2021)
 
 #### ⚠️ Pushed to `master`
