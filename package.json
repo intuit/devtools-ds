@@ -25,7 +25,8 @@
     "packages/*"
   ],
   "publishConfig": {
-    "registry": "https://registry.npmjs.com"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "resolutions": {
     "@types/react": "16.9.53",
