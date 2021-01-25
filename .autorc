@@ -1,11 +1,6 @@
 {
   "plugins": [
-    [
-      "npm",
-      {
-        "setRcToken": false
-      }
-    ],
+    "npm",
     "released",
     "first-time-contributor",
     "all-contributors"
