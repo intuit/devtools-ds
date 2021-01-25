@@ -57,7 +57,7 @@ jobs:
           paths:
             - .
 
-  build-docs:
+  docs-pr:
     <<: *defaults
     steps:
       - attach_workspace:
@@ -65,12 +65,6 @@ jobs:
       - run:
           name: Build Storybook
           command: yarn build:storybook
-
-  publish-docs-pr:
-    <<: *defaults
-    steps:
-      - attach_workspace:
-          at: ~/design-system
       - store_artifacts:
           path: ./out
           destination: documentation
@@ -78,11 +72,14 @@ jobs:
           name: Post Link to storybook
           command: node ./.circleci/post-build-url.js
 
-  publish-docs-release:
+  docs-release:
     <<: *defaults
     steps:
       - attach_workspace:
           at: ~/design-system
+      - run:
+          name: Build Storybook
+          command: yarn build:storybook
       - run:
           name: Configure GH user
           command: git config user.email "github@tylerkrupicka.com" && git config user.name "ci-build"
@@ -162,14 +159,18 @@ workflows:
           requires:
             - build
 
-      - build-docs:
+      - docs-pr:
           requires:
-            - unit-tests
             - lint
+            - unit-tests
+          filters:
+            branches:
+              ignore:
+                - master
 
-      - publish-docs-pr:
+      - size:
           requires:
-            - build-docs
+            - docs-pr
           filters:
             branches:
               ignore:
@@ -177,25 +178,17 @@ workflows:
 
       - release:
           requires:
-            - build-docs
+            - lint
+            - unit-tests
           filters:
             branches:
               only:
                 - master
 
-      - publish-docs-release:
+      - docs-release:
           requires:
-            - build-docs
             - release
           filters:
             branches:
               only:
-                - master
-
-      - size:
-          requires:
-            - build-docs
-          filters:
-            branches:
-              ignore:
                 - master
