@@ -1,7 +1,7 @@
 {
   "name": "@devtools-ds/storybook-theme-addon",
   "private": true,
-  "version": "0.130.2",
+  "version": "0.130.3",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist",
@@ -33,7 +33,7 @@
   ],
   "dependencies": {
     "@babel/runtime": "7.11.2",
-    "@devtools-ds/themes": "^0.130.2",
+    "@devtools-ds/themes": "^0.130.3",
     "@storybook/addons": "^6.1.9",
     "@storybook/api": "^6.1.9",
     "@storybook/channels": "^6.1.9",
