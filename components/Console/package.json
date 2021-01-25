@@ -10,6 +10,10 @@
     "Adam Dierkens Adam_Dierkens@intuit.com"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "sideEffects": [
     "*.css",
     "dist/esm/index.js"
@@ -26,13 +30,13 @@
   },
   "dependencies": {
     "@babel/runtime": "7.7.2",
-    "@devtools-ds/icon": "link:../Icon",
-    "@devtools-ds/object-inspector": "link:../ObjectInspector",
-    "@devtools-ds/themes": "link:../../packages/themes",
+    "@devtools-ds/icon": "^0.130.1",
+    "@devtools-ds/object-inspector": "^0.130.1",
+    "@devtools-ds/themes": "^0.130.1",
     "clsx": "1.1.0"
   },
   "devDependencies": {
-    "@devtools-ds/storybook-utils": "link:../../packages/storybook-utils",
+    "@devtools-ds/storybook-utils": "^0.130.1",
     "@devtools-ds/themes": "link:../../packages/themes"
   },
   "peerDependencies": {
@@ -46,5 +50,6 @@
     "!*.test.*",
     "!__snapshots__",
     "!__tests__"
-  ]
+  ],
+  "gitHead": "abfe550409142712633f50144b35102a0e62e43f"
 }

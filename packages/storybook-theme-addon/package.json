@@ -10,6 +10,10 @@
     "Tyler Krupicka github@tylerkrupicka.com"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "scripts": {
     "clean": "ds clean",
     "build": "ds build",
@@ -28,7 +32,7 @@
   ],
   "dependencies": {
     "@babel/runtime": "7.11.2",
-    "@devtools-ds/themes": "link:../themes",
+    "@devtools-ds/themes": "^0.130.1",
     "@storybook/addons": "^6.1.9",
     "@storybook/api": "^6.1.9",
     "@storybook/channels": "^6.1.9",
@@ -38,5 +42,6 @@
   },
   "peerDependencies": {
     "react": "16.13.1"
-  }
+  },
+  "gitHead": "abfe550409142712633f50144b35102a0e62e43f"
 }

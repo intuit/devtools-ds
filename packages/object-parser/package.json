@@ -10,6 +10,10 @@
     "Tyler Krupicka github@tylerkrupicka.com"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "scripts": {
     "clean": "ds clean",
     "build": "ds build",
@@ -27,5 +31,6 @@
   ],
   "dependencies": {
     "@babel/runtime": "~7.5.4"
-  }
+  },
+  "gitHead": "abfe550409142712633f50144b35102a0e62e43f"
 }

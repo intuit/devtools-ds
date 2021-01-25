@@ -10,6 +10,10 @@
     "Tyler Krupicka github@tylerkrupicka.com"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "sideEffects": [
     "*.css",
     "dist/esm/index.js"
@@ -26,9 +30,9 @@
   },
   "dependencies": {
     "@babel/runtime": "7.7.2",
-    "@devtools-ds/object-parser": "link:../../packages/object-parser",
-    "@devtools-ds/themes": "link:../../packages/themes",
-    "@devtools-ds/tree": "link:../Tree",
+    "@devtools-ds/object-parser": "^0.130.1",
+    "@devtools-ds/themes": "^0.130.1",
+    "@devtools-ds/tree": "^0.130.1",
     "clsx": "1.1.0"
   },
   "peerDependencies": {
@@ -42,5 +46,6 @@
     "!*.test.*",
     "!__snapshots__",
     "!__tests__"
-  ]
+  ],
+  "gitHead": "abfe550409142712633f50144b35102a0e62e43f"
 }

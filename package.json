@@ -7,6 +7,10 @@
     "Tyler Krupicka github@tylerkrupicka.com"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "scripts": {
     "create": "ds create component",
     "create:package": "ds create package",
@@ -24,10 +28,6 @@
     "components/*",
     "packages/*"
   ],
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
   "resolutions": {
     "@types/react": "16.9.53",
     "react": "16.9.0",
