@@ -28,7 +28,7 @@ Each component:
 - Aims to be keyboard accessible and screen-reader friendly
 - Uses minimal external dependencies
 
-Read more in our [Storybook documentation site](https://github.com/intuit/devtools-ds).
+Read more in our [Storybook documentation site](https://intuit.github.io/devtools-ds).
 
 ## :hammer: Developer Set-up
 
