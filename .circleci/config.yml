@@ -84,8 +84,8 @@ jobs:
       - attach_workspace:
           at: ~/design-system
       - run:
-        name: Install and configure dependencies
-        command: git config user.email "github@tylerkrupicka.com" && git config user.name "ci-build"
+          name: Configure GH user
+          command: git config user.email "github@tylerkrupicka.com" && git config user.name "ci-build"
       - run:
           name: Deploy docs to gh-pages branch
           command: yarn gh-pages --dist ./out
