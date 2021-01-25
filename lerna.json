@@ -1,5 +1,4 @@
 {
-  "registry": "https://registry.npmjs.com",
   "packages": ["components/*", "packages/*"],
   "version": "0.130.0",
   "npmClient": "yarn",
