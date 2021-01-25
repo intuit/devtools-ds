@@ -1,6 +1,6 @@
 {
   "name": "@devtools-ds/node",
-  "version": "0.130.4",
+  "version": "0.130.5",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist",
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@babel/runtime": "7.7.2",
-    "@devtools-ds/themes": "^0.130.4",
+    "@devtools-ds/themes": "^0.130.5",
     "clsx": "1.1.0"
   },
   "peerDependencies": {
