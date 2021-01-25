@@ -57,7 +57,7 @@ jobs:
           paths:
             - .
 
-  documentation:
+  docs-pr:
     <<: *defaults
     steps:
       - attach_workspace:
@@ -71,6 +71,21 @@ jobs:
       - run:
           name: Post Link to storybook
           command: node ./.circleci/post-build-url.js
+
+  docs-release:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/design-system
+      - run:
+          name: Build Storybook
+          command: yarn build:storybook
+      - run:
+          name: Configure GH user
+          command: git config user.email "github@tylerkrupicka.com" && git config user.name "ci-build"
+      - run:
+          name: Deploy docs to gh-pages branch
+          command: yarn gh-pages --dist ./out
 
   pr-check:
     <<: *defaults
@@ -116,7 +131,7 @@ jobs:
           at: ~/design-system
       - run:
           name: Check component bundle sizes
-          command: SIZE_TABLE=`yarn --silent size --ci` && npx auto comment --message "$SIZE_TABLE" --context bundle
+          command: yarn size --ci --comment
 
 workflows:
   version: 2
@@ -144,23 +159,36 @@ workflows:
           requires:
             - build
 
-      - documentation:
+      - docs-pr:
           requires:
-            - unit-tests
             - lint
+            - unit-tests
+          filters:
+            branches:
+              ignore:
+                - master
+
+      - size:
+          requires:
+            - docs-pr
+          filters:
+            branches:
+              ignore:
+                - master
 
       - release:
           requires:
-            - documentation
+            - lint
+            - unit-tests
           filters:
             branches:
               only:
                 - master
 
-      - size:
+      - docs-release:
           requires:
-            - documentation
+            - release
           filters:
             branches:
-              ignore:
+              only:
                 - master
