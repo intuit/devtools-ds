@@ -1,3 +1,17 @@
+# v0.130.5 (Sun Jan 24 2021)
+
+#### ⚠️ Pushed to `master`
+
+- update author ([@tylerkrupicka](https://github.com/tylerkrupicka))
+- `@devtools-ds/console`, `@devtools-ds/dom-inspector`, `@devtools-ds/diagnostic`, `@devtools-ds/icon`, `@devtools-ds/navigation`, `@devtools-ds/node`, `@devtools-ds/object-inspector`, `@devtools-ds/table`, `@devtools-ds/tree`, `@devtools-ds/docs`, `@devtools-ds/object-parser`, `@devtools-ds/storybook-theme-addon`, `@devtools-ds/storybook-utils`, `@devtools-ds/themes`
+  - Merge branch 'master' of https://github.com/intuit/devtools-ds ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### Authors: 1
+
+- Tyler Krupicka ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+---
+
 # v0.130.4 (Sun Jan 24 2021)
 
 #### ⚠️ Pushed to `master`
