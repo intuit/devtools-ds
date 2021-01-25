@@ -72,21 +72,6 @@ jobs:
           name: Post Link to storybook
           command: node ./.circleci/post-build-url.js
 
-  docs-release:
-    <<: *defaults
-    steps:
-      - attach_workspace:
-          at: ~/design-system
-      - run:
-          name: Build Storybook
-          command: yarn build:storybook
-      - run:
-          name: Configure GH user
-          command: git config user.email "github@tylerkrupicka.com" && git config user.name "ci-build"
-      - run:
-          name: Deploy docs to gh-pages branch
-          command: yarn gh-pages --dist ./out
-
   pr-check:
     <<: *defaults
     steps:
@@ -180,14 +165,6 @@ workflows:
           requires:
             - lint
             - unit-tests
-          filters:
-            branches:
-              only:
-                - master
-
-      - docs-release:
-          requires:
-            - release
           filters:
             branches:
               only:

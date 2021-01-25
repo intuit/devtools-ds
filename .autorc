@@ -1,6 +1,13 @@
 {
   "plugins": [
     "npm",
+    [
+      "gh-pages",
+      {
+         "buildCommand": "yarn build:storybook",
+        "dir": "./out"
+      }
+    ],
     "released",
     "first-time-contributor",
     "all-contributors"
