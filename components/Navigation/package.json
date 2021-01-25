@@ -1,6 +1,6 @@
 {
   "name": "@devtools-ds/navigation",
-  "version": "0.130.0",
+  "version": "0.130.1",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist",
