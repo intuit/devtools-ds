@@ -5,14 +5,17 @@
 }
 
 .nav {
+  width: 100%;
+  color: @theme textColor;
+  overflow-x: auto;
+}
+
+.controls {
   background-color: @theme backgroundColor;
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
-  color: @theme textColor;
   border-bottom: 1px solid @theme dividerColor;
-  overflow-x: auto;
 }
 
 .button {

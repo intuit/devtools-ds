@@ -1,48 +1,36 @@
 import React from "react";
 import makeClass from "clsx";
+import {
+  Tabs,
+  TabList as ReachTabList,
+  Tab as ReachTab,
+  TabPanels,
+  TabPanel,
+  TabsKeyboardActivation,
+  useTabsContext,
+} from "@reach/tabs";
 import { useTheme, ThemeableElement } from "@devtools-ds/themes";
 import { styled, Element } from "@design-systems/utils";
 import styles from "./Navigation.css";
 
-export interface NavigationContextType {
-  /** the id of the tab that's selected */
-  selectedTabId?: string;
-}
-
-export const NavigationContext = React.createContext<NavigationContextType>({});
-
-export interface NavigationProps extends ThemeableElement<"nav"> {
-  /** the id of the tab that's selected */
-  selectedTabId?: string;
-}
-
 /** The top-nav in devtools */
-export const Navigation = (props: NavigationProps) => {
-  const {
-    children,
-    className,
-    theme,
-    colorScheme,
-    selectedTabId,
-    ...html
-  } = props;
+export const Navigation = (props: ThemeableElement<"nav">) => {
+  const { children, className, theme, colorScheme, ...html } = props;
 
   const { themeClass, currentTheme } = useTheme({ theme, colorScheme }, styles);
 
   return (
-    <NavigationContext.Provider value={{ selectedTabId }}>
-      <nav
-        {...html}
-        className={makeClass(
-          styles.nav,
-          className,
-          themeClass,
-          styles[currentTheme]
-        )}
-      >
-        {children}
-      </nav>
-    </NavigationContext.Provider>
+    <nav
+      {...html}
+      className={makeClass(
+        styles.nav,
+        className,
+        themeClass,
+        styles[currentTheme]
+      )}
+    >
+      <Tabs keyboardActivation={TabsKeyboardActivation.Manual}>{children}</Tabs>
+    </nav>
   );
 };
 
@@ -54,20 +42,9 @@ export interface ButtonProps extends Element<"button"> {
   children?: React.ReactChild;
 }
 
-/** A tab in the nav-bar (memory panel, console) */
-export const Tab = (props: ButtonProps) => {
-  const { className, ...html } = props;
-  const { selectedTabId } = React.useContext(NavigationContext);
-
-  return (
-    <Button
-      {...html}
-      className={makeClass(className, styles.tab, {
-        [styles.selected]: selectedTabId && props.id === selectedTabId,
-      })}
-    />
-  );
-};
+export interface TabProps extends ButtonProps {
+  index?: number;
+}
 
 /**
  * A non-tab but clickable thing in the nav bar
@@ -87,6 +64,24 @@ export const Button = (props: ButtonProps) => {
   );
 };
 
+/** A tab in the nav-bar (memory panel, console) */
+export const Tab = (props: TabProps) => {
+  const { className, index, icon, children, ...html } = props;
+  const { selectedIndex } = useTabsContext();
+
+  return (
+    <ReachTab
+      {...html}
+      className={makeClass(className, styles.tab, styles.button, {
+        [styles.selected]: index !== undefined && selectedIndex === index,
+      })}
+    >
+      {icon && <div className={styles.icon}>{icon}</div>}
+      {children && <div>{children}</div>}
+    </ReachTab>
+  );
+};
+
 export const Divider = styled("div", {
   class: styles.divider,
   name: "Navigation.Divider",
@@ -102,14 +97,32 @@ export const Right = styled("div", {
   name: "Navigation.Right",
 });
 
-export const Overflow = styled("div", {
-  class: styles.overflow,
-  name: "Navigation.Overflow",
+export const Controls = styled("div", {
+  class: styles.controls,
+  name: "Navigation.Controls",
 });
 
+export interface TabListProps extends Element<"div"> {
+  children: React.ReactElement<TabProps> | Array<React.ReactElement<TabProps>>;
+}
+
+export const TabList = (props: TabListProps) => {
+  const { children, className } = props;
+  return (
+    <ReachTabList className={makeClass(className, styles.overflow)}>
+      {React.Children.map(children, (child, index) => {
+        return React.cloneElement(child, { index });
+      })}
+    </ReachTabList>
+  );
+};
+
+Navigation.Controls = Controls;
 Navigation.Left = Left;
 Navigation.Right = Right;
-Navigation.Overflow = Overflow;
+Navigation.TabList = TabList;
 Navigation.Divider = Divider;
 Navigation.Tab = Tab;
 Navigation.Button = Button;
+Navigation.Panels = TabPanels;
+Navigation.Panel = TabPanel;
