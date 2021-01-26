@@ -30,9 +30,9 @@
   },
   "dependencies": {
     "@babel/runtime": "7.7.2",
-    "@devtools-ds/node": "^0.130.5",
-    "@devtools-ds/themes": "^0.130.5",
-    "@devtools-ds/tree": "^0.130.5",
+    "@devtools-ds/node": "link:../Node",
+    "@devtools-ds/themes": "link:../../packages/themes",
+    "@devtools-ds/tree": "link:../Tree",
     "clsx": "1.1.0"
   },
   "peerDependencies": {

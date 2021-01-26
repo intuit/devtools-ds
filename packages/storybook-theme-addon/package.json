@@ -33,7 +33,7 @@
   ],
   "dependencies": {
     "@babel/runtime": "7.11.2",
-    "@devtools-ds/themes": "^0.130.5",
+    "@devtools-ds/themes": "link:../theme",
     "@storybook/addons": "^6.1.9",
     "@storybook/api": "^6.1.9",
     "@storybook/channels": "^6.1.9",

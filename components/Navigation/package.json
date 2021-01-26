@@ -40,7 +40,7 @@
     "react": ">= 16.8.6"
   },
   "devDependencies": {
-    "@devtools-ds/icon": "^0.130.5"
+    "@devtools-ds/icon": "link:../Icon"
   },
   "files": [
     "dist",
