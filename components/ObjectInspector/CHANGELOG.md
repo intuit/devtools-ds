@@ -1,3 +1,19 @@
+# v0.131.0 (Tue Jan 26 2021)
+
+#### 🚀 Enhancement
+
+- Navigation Accessibility [#4](https://github.com/intuit/devtools-ds/pull/4) ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### 🐛 Bug Fix
+
+- fix yarn links ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### Authors: 1
+
+- Tyler Krupicka ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+---
+
 # v0.130.5 (Sun Jan 24 2021)
 
 #### ⚠️ Pushed to `master`

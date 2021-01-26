@@ -1,3 +1,20 @@
+# v0.131.0 (Tue Jan 26 2021)
+
+#### 🚀 Enhancement
+
+- `@devtools-ds/console`, `@devtools-ds/dom-inspector`, `@devtools-ds/diagnostic`, `@devtools-ds/icon`, `@devtools-ds/navigation`, `@devtools-ds/node`, `@devtools-ds/object-inspector`, `@devtools-ds/table`, `@devtools-ds/tree`, `@devtools-ds/storybook-theme-addon`
+  - Navigation Accessibility [#4](https://github.com/intuit/devtools-ds/pull/4) ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### 📝 Documentation
+
+- Update README.md [#3](https://github.com/intuit/devtools-ds/pull/3) ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### Authors: 1
+
+- Tyler Krupicka ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+---
+
 # v0.130.5 (Sun Jan 24 2021)
 
 #### ⚠️ Pushed to `master`
