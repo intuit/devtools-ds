@@ -49,7 +49,9 @@
       "profile": "http://tylerkrupicka.com/",
       "contributions": [
         "doc",
-        "code"
+        "code",
+        "example",
+        "test"
       ]
     }
   ],
