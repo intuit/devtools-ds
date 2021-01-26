@@ -1,4 +1,6 @@
 import React from "react";
+import { render, fireEvent } from "@testing-library/react";
+import { act } from "react-dom/test-utils";
 import {
   CloseIcon,
   ConsoleIcon,
@@ -11,17 +13,16 @@ import {
   StylesIcon,
   OdometerIcon,
 } from "@devtools-ds/icon";
-import { Navigation } from "..";
-import notes from "../../README.md";
+import { Navigation } from ".";
 
-export default {
-  title: "Components/Navigation",
-  parameters: { notes },
-};
+/*
+I had trouble getting fired keyboard events to work on this component.
+Feel free to add tests if you can get it to work!
+*/
 
-export const Playground = () => {
+const Example = () => {
   return (
-    <Navigation>
+    <Navigation data-testid="root">
       <Navigation.Controls>
         <Navigation.Left>
           <Navigation.Button
@@ -70,7 +71,7 @@ export const Playground = () => {
       </Navigation.Controls>
       <Navigation.Panels>
         <Navigation.Panel>Elements</Navigation.Panel>
-        <Navigation.Panel>Console</Navigation.Panel>
+        <Navigation.Panel>Console Test</Navigation.Panel>
         <Navigation.Panel>Debugger</Navigation.Panel>
         <Navigation.Panel>Styles</Navigation.Panel>
         <Navigation.Panel>Performance</Navigation.Panel>
@@ -79,3 +80,29 @@ export const Playground = () => {
     </Navigation>
   );
 };
+
+describe("Navigation", () => {
+  test("Renders tabs and panels", () => {
+    const { getAllByText } = render(<Example />);
+
+    expect(getAllByText("Elements")).toHaveLength(2);
+    expect(getAllByText("Debugger")).toHaveLength(2);
+    expect(getAllByText("Memory")).toHaveLength(2);
+  });
+
+  test("Shows panels when selected", () => {
+    const { getAllByText } = render(<Example />);
+
+    const elements = getAllByText("Elements")[0];
+    elements?.focus();
+
+    expect(getAllByText("Console Test")[0]).not.toBeVisible();
+
+    // Open root
+    act(() => {
+      fireEvent.click(getAllByText("Console")[0]);
+    });
+
+    expect(getAllByText("Console Test")[0]).toBeVisible();
+  });
+});

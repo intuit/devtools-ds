@@ -30,14 +30,13 @@
   },
   "dependencies": {
     "@babel/runtime": "7.7.2",
-    "@devtools-ds/icon": "^0.130.5",
-    "@devtools-ds/object-inspector": "^0.130.5",
-    "@devtools-ds/themes": "^0.130.5",
+    "@devtools-ds/icon": "link:../Icon",
+    "@devtools-ds/object-inspector": "link:../ObjectInspector",
+    "@devtools-ds/themes": "link:../../packages/themes",
     "clsx": "1.1.0"
   },
   "devDependencies": {
-    "@devtools-ds/storybook-utils": "^0.130.5",
-    "@devtools-ds/themes": "link:../../packages/themes"
+    "@devtools-ds/storybook-utils": "link:../../packages/storybook-utils"
   },
   "peerDependencies": {
     "react": ">= 16.8.6"

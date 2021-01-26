@@ -1700,6 +1700,59 @@
     focus-lock "^0.8.0"
     react-merge-refs "^1.0.0"
 
+"@devtools-ds/icon@link:components/Icon":
+  version "0.130.5"
+  dependencies:
+    "@babel/runtime" "7.7.2"
+    "@design-systems/utils" "2.12.0"
+    "@devtools-ds/themes" "link:packages/themes"
+    clsx "1.1.0"
+
+"@devtools-ds/node@link:components/Node":
+  version "0.130.5"
+  dependencies:
+    "@babel/runtime" "7.7.2"
+    "@devtools-ds/themes" "link:packages/theme"
+    clsx "1.1.0"
+
+"@devtools-ds/object-inspector@link:components/ObjectInspector":
+  version "0.130.5"
+  dependencies:
+    "@babel/runtime" "7.7.2"
+    "@devtools-ds/object-parser" "link:packages/object-parser"
+    "@devtools-ds/themes" "link:packages/themes"
+    "@devtools-ds/tree" "link:components/Tree"
+    clsx "1.1.0"
+
+"@devtools-ds/object-parser@link:packages/object-parser":
+  version "0.130.5"
+  dependencies:
+    "@babel/runtime" "~7.5.4"
+
+"@devtools-ds/storybook-utils@link:packages/storybook-utils":
+  version "0.130.5"
+  dependencies:
+    "@babel/runtime" "~7.5.4"
+
+"@devtools-ds/themes@link:packages/theme":
+  version "0.0.0"
+  uid ""
+
+"@devtools-ds/themes@link:packages/themes":
+  version "0.130.5"
+  dependencies:
+    "@babel/runtime" "~7.5.4"
+    "@design-systems/utils" "2.12.0"
+    clsx "1.1.0"
+    react-device-detect "1.15.0"
+
+"@devtools-ds/tree@link:components/Tree":
+  version "0.130.5"
+  dependencies:
+    "@babel/runtime" "7.7.2"
+    "@devtools-ds/themes" "link:packages/themes"
+    clsx "1.1.0"
+
 "@doc-blocks/design-spec@^0.8.2":
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/@doc-blocks/design-spec/-/design-spec-0.8.2.tgz#e6720c09db7c1a8e7a582df2d41d3dd0fd9126c7"
@@ -3327,6 +3380,14 @@
     "@reach/utils" "0.12.1"
     tslib "^2.0.0"
 
+"@reach/descendants@0.12.1":
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/@reach/descendants/-/descendants-0.12.1.tgz#dd124e15ee66327692043fea798cc4b6232c1522"
+  integrity sha512-lvpyQ2EixbN7GvT8LyjZfHWQZz/cKwa/p7E26YQOT8nvxm4ABKRGxaSTwUA7D+MLOX6NtHo2qyZ9wippaXB5sQ==
+  dependencies:
+    "@reach/utils" "0.12.1"
+    tslib "^2.0.0"
+
 "@reach/router@^1.3.3":
   version "1.3.4"
   resolved "https://registry.yarnpkg.com/@reach/router/-/router-1.3.4.tgz#d2574b19370a70c80480ed91f3da840136d10f8c"
@@ -3336,6 +3397,17 @@
     invariant "^2.2.3"
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
+
+"@reach/tabs@0.12.1":
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/@reach/tabs/-/tabs-0.12.1.tgz#d0e1cfe19c0a866b35d686d51bbc50552df74e29"
+  integrity sha512-k9piLoajPhIpM6BlHDSTMaBK9dGYDB9Ri+Ic+o+BqLzO1Lm0mC3ghXeYJcwyTzGA47dOYklI65TW/RxYqtT38g==
+  dependencies:
+    "@reach/auto-id" "0.12.1"
+    "@reach/descendants" "0.12.1"
+    "@reach/utils" "0.12.1"
+    prop-types "^15.7.2"
+    tslib "^2.0.0"
 
 "@reach/utils@0.12.1":
   version "0.12.1"
