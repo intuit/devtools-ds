@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@babel/runtime": "7.7.2",
-    "@devtools-ds/themes": "link:../../packages/theme",
+    "@devtools-ds/themes": "link:../../packages/themes",
     "clsx": "1.1.0"
   },
   "peerDependencies": {
