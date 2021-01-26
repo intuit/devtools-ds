@@ -43,6 +43,7 @@ export interface ButtonProps extends Element<"button"> {
 }
 
 export interface TabProps extends ButtonProps {
+  /** Index of the current tab */
   index?: number;
 }
 
@@ -103,9 +104,11 @@ export const Controls = styled("div", {
 });
 
 export interface TabListProps extends Element<"div"> {
+  /** Only have Tabs inside a TabList */
   children: React.ReactElement<TabProps> | Array<React.ReactElement<TabProps>>;
 }
 
+/** The list of Tabs */
 export const TabList = (props: TabListProps) => {
   const { children, className } = props;
   return (
