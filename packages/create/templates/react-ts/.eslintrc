@@ -1,0 +1,17 @@
+{
+  "extends": "@design-systems",
+  "rules": {
+    "no-unused-expressions": 0,
+    "import/no-cycle": 0,
+    "jsdoc/require-jsdoc": 1,
+    "@typescript-eslint/no-namespace": 0,
+    "@typescript-eslint/camelcase": 0,
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/ban-ts-comment": 0,
+    "max-classes-per-file": 0,
+    "no-underscore-dangle": 0,
+    "@typescript-eslint/no-empty-function": 0,
+    "camelcase": 0,
+    "no-alert":"warn"
+  }
+}

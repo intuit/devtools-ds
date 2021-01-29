@@ -1701,7 +1701,7 @@
     react-merge-refs "^1.0.0"
 
 "@devtools-ds/icon@link:components/Icon":
-  version "0.130.5"
+  version "0.131.0"
   dependencies:
     "@babel/runtime" "7.7.2"
     "@design-systems/utils" "2.12.0"
@@ -1709,14 +1709,14 @@
     clsx "1.1.0"
 
 "@devtools-ds/node@link:components/Node":
-  version "0.130.5"
+  version "0.131.0"
   dependencies:
     "@babel/runtime" "7.7.2"
-    "@devtools-ds/themes" "link:packages/theme"
+    "@devtools-ds/themes" "link:packages/themes"
     clsx "1.1.0"
 
 "@devtools-ds/object-inspector@link:components/ObjectInspector":
-  version "0.130.5"
+  version "0.131.0"
   dependencies:
     "@babel/runtime" "7.7.2"
     "@devtools-ds/object-parser" "link:packages/object-parser"
@@ -1725,21 +1725,17 @@
     clsx "1.1.0"
 
 "@devtools-ds/object-parser@link:packages/object-parser":
-  version "0.130.5"
+  version "0.131.0"
   dependencies:
     "@babel/runtime" "~7.5.4"
 
 "@devtools-ds/storybook-utils@link:packages/storybook-utils":
-  version "0.130.5"
+  version "0.131.0"
   dependencies:
     "@babel/runtime" "~7.5.4"
 
-"@devtools-ds/themes@link:packages/theme":
-  version "0.0.0"
-  uid ""
-
 "@devtools-ds/themes@link:packages/themes":
-  version "0.130.5"
+  version "0.131.0"
   dependencies:
     "@babel/runtime" "~7.5.4"
     "@design-systems/utils" "2.12.0"
@@ -1747,7 +1743,7 @@
     react-device-detect "1.15.0"
 
 "@devtools-ds/tree@link:components/Tree":
-  version "0.130.5"
+  version "0.131.0"
   dependencies:
     "@babel/runtime" "7.7.2"
     "@devtools-ds/themes" "link:packages/themes"
@@ -4633,7 +4629,7 @@
   dependencies:
     "@types/node" "*"
 
-"@types/signale@^1.4.0":
+"@types/signale@1.4.1", "@types/signale@^1.4.0":
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/@types/signale/-/signale-1.4.1.tgz#6137a6fd7960b48703dd2793c5b795480368b246"
   integrity sha512-05d9fUDqRnt36rizLgo38SbPTrkMzdhXpvSHSAhxzokgIUPGNUoXHV0zYjPpTd4IryDADJ0mGHpfJ/Yhjyh9JQ==
@@ -6721,7 +6717,7 @@ camel-case@^3.0.0:
     no-case "^2.2.0"
     upper-case "^1.1.1"
 
-camel-case@^4.1.1:
+camel-case@^4.1.1, camel-case@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/camel-case/-/camel-case-4.1.2.tgz#9728072a954f805228225a6deea6b38461e1bd5a"
   integrity sha512-gxGWBrTT1JuMx6R+o5PTXMmUnhnVzLQ9SNutD4YqKtI6ap897t3tKECYla6gCWEkplXnlNybEkZg9GEGxKFCgw==
@@ -6916,6 +6912,24 @@ change-case@4.1.1:
     sentence-case "^3.0.3"
     snake-case "^3.0.3"
     tslib "^1.10.0"
+
+change-case@4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/change-case/-/change-case-4.1.2.tgz#fedfc5f136045e2398c0410ee441f95704641e12"
+  integrity sha512-bSxY2ws9OtviILG1EiY5K7NNxkqg/JnRnFxLtKQ96JaviiIxi7djMrSd0ECT9AC+lttClmYwKw53BWpOMblo7A==
+  dependencies:
+    camel-case "^4.1.2"
+    capital-case "^1.0.4"
+    constant-case "^3.0.4"
+    dot-case "^3.0.4"
+    header-case "^2.0.4"
+    no-case "^3.0.4"
+    param-case "^3.0.4"
+    pascal-case "^3.1.2"
+    path-case "^3.0.4"
+    sentence-case "^3.0.4"
+    snake-case "^3.0.4"
+    tslib "^2.0.3"
 
 char-regex@^1.0.2:
   version "1.0.2"
@@ -7559,7 +7573,7 @@ constant-case@^2.0.0:
     snake-case "^2.1.0"
     upper-case "^1.1.1"
 
-constant-case@^3.0.3:
+constant-case@^3.0.3, constant-case@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/constant-case/-/constant-case-3.0.4.tgz#3b84a9aeaf4cf31ec45e6bf5de91bdfb0589faf1"
   integrity sha512-I2hSBi7Vvs7BEuJDr5dDHfzb/Ruj3FyvFyh7KLilAjNQw3Be+xgqUBA2W6scVEcL0hL1dwPRtIqEPVUCKkSsyQ==
@@ -9039,7 +9053,7 @@ enhanced-resolve@^4.3.0, enhanced-resolve@^4.5.0:
     memory-fs "^0.5.0"
     tapable "^1.0.0"
 
-enquirer@^2.3.4, enquirer@^2.3.5:
+enquirer@2.3.6, enquirer@^2.3.4, enquirer@^2.3.5:
   version "2.3.6"
   resolved "https://registry.yarnpkg.com/enquirer/-/enquirer-2.3.6.tgz#2a7fe5dd634a1e4125a975ec994ff5456dc3734d"
   integrity sha512-yjNnPr315/FjS4zIsUxYguYUPP2e1NK4d7E7ZOLiyYCcbFBiTMyID+2wvm2w6+pZ/odMA7cRkjhsPbltwBOrLg==
@@ -11224,7 +11238,7 @@ header-case@^1.0.0:
     no-case "^2.2.0"
     upper-case "^1.1.3"
 
-header-case@^2.0.3:
+header-case@^2.0.3, header-case@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/header-case/-/header-case-2.0.4.tgz#5a42e63b55177349cf405beb8d775acabb92c063"
   integrity sha512-H/vuk5TEEVZwrR0lp2zed9OCo1uAILMlx0JEMgC26rzyJJ3N1v6XkwHHXJQdR2doSjcGPM6OKPYoJgf0plJ11Q==
@@ -15694,7 +15708,7 @@ param-case@^2.1.0:
   dependencies:
     no-case "^2.2.0"
 
-param-case@^3.0.3:
+param-case@^3.0.3, param-case@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/param-case/-/param-case-3.0.4.tgz#7d17fe4aa12bde34d4a77d91acfb6219caad01c5"
   integrity sha512-RXlj7zCYokReqWpOPH9oYivUzLYZ5vAPIfEmCTNViosC78F8F0H9y7T7gG2M39ymgutxF5gcFEsyZQSph9Bp3A==
@@ -15852,7 +15866,7 @@ path-case@^2.1.0:
   dependencies:
     no-case "^2.2.0"
 
-path-case@^3.0.3:
+path-case@^3.0.3, path-case@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/path-case/-/path-case-3.0.4.tgz#9168645334eb942658375c56f80b4c0cb5f82c6f"
   integrity sha512-qO4qCFjXqVTrcbPt/hQfhTQ+VhFsqNKOPtytgNKkKxSoEp3XPUQ8ObFuePylOIok5gjn69ry8XiULxCwot3Wfg==
@@ -18623,7 +18637,7 @@ sentence-case@^2.1.0:
     no-case "^2.2.0"
     upper-case-first "^1.1.2"
 
-sentence-case@^3.0.3:
+sentence-case@^3.0.3, sentence-case@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/sentence-case/-/sentence-case-3.0.4.tgz#3645a7b8c117c787fde8702056225bb62a45131f"
   integrity sha512-8LS0JInaQMCRoQ7YUytAo/xUu5W2XnQxV2HI/6uM6U7CITS1RqPElr30V6uIqyMKM9lJGRVFy5/4CuzcixNYSg==
@@ -18883,7 +18897,7 @@ snake-case@^2.1.0:
   dependencies:
     no-case "^2.2.0"
 
-snake-case@^3.0.3:
+snake-case@^3.0.3, snake-case@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/snake-case/-/snake-case-3.0.4.tgz#4f2bbd568e9935abdfd593f34c691dadb49c452c"
   integrity sha512-LAOh4z89bGQvl9pFfNF8V146i7o7/CqFPbqzYgP+yYzDIDeS9HaNFtXABamRW+AQzEVODcvE79ljJ+8a9YSdMg==

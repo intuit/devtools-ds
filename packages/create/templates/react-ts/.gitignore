@@ -1,0 +1,8 @@
+/node_modules
+/*.log
+/dist
+/dist_firefox
+/dist-zip
+.vscode
+.DS_Store
+/web-ext-artifacts
