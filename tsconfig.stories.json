@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.build.json",
   "include": ["packages/**/*", "components/**/*", "typings/**/*"],
+  "exclude": ["packages/create/templates/**/*"],
   "compilerOptions": {
     "skipLibCheck": true,
     "noEmit": true,
