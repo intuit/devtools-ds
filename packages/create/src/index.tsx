@@ -1,5 +1,7 @@
 import { prompt } from "enquirer";
 import signale from "signale";
+import { v4 as uuid } from "uuid";
+import { paramCase, constantCase, capitalCase } from "change-case";
 import copy from "copy-template-dir";
 import { readdirSync, statSync } from "fs";
 import { join } from "path";
@@ -22,7 +24,7 @@ const getTemplatePath = (template: string) => {
 /** Build a template */
 const main = async () => {
   signale.start("Starting devtools-ds project generation..");
-  const responses = (await prompt([
+  let responses = (await prompt([
     {
       type: "select",
       name: "template",
@@ -31,24 +33,37 @@ const main = async () => {
     },
     {
       type: "input",
-      name: "project_name",
+      name: "projectName",
       message: "What is your devtools project's name?",
     },
     {
       type: "input",
-      name: "project_org",
+      name: "projectOrg",
       message: "What will your project's GitHub organization be?",
     },
-    { type: "input", name: "dev_name", message: "What is your name?" },
-    { type: "input", name: "dev_email", message: "What is your email?" },
+    { type: "input", name: "devName", message: "What is your name?" },
+    { type: "input", name: "devEmail", message: "What is your email?" },
   ])) as any;
+
+  let { projectName } = responses;
+  const projectNameConstant = constantCase(projectName);
+  const projectNameCapital = capitalCase(projectName);
+  projectName = paramCase(projectName);
+
+  responses = {
+    ...responses,
+    projectName,
+    projectNameCapital,
+    projectNameConstant,
+    uuid: `{${uuid()}}`,
+  };
 
   signale.success("Recorded responses");
   signale.await(`Loading ${responses.template} template..`);
 
   copy(
     getTemplatePath(responses.template),
-    `${process.cwd()}/${responses.project_name}/`,
+    `${process.cwd()}/${responses.projectName}/`,
     responses,
     (err, createdFiles) => {
       if (err) throw err;
@@ -56,7 +71,7 @@ const main = async () => {
         signale.complete(`Created ${filePath}`)
       );
       signale.success(
-        `Navigate into ${responses.project_name}/ to get started!`
+        `Navigate into ${responses.projectName}/ to get started!`
       );
     }
   );

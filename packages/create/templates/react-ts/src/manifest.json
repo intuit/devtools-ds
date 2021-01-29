@@ -1,5 +1,5 @@
 {
-  "name": "Developer Tools",
+  "name": "{{projectNameCapital}}",
   "description": "Custom developer tools from Devtools-DS",
   "devtools_page": "panel/startup.html",
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
@@ -10,14 +10,14 @@
   },
   "applications": {
     "gecko": {
-      "id": "{<id>}"
+      "id": "{{uuid}}"
     }
   },
   "browser_action": {
     "default_icon": {
       "128": "assets/icon_128.png"
     },
-    "default_title": "Devtools-DS Devtools",
+    "default_title": "{{projectNameCapital}}",
     "default_popup": "popup/popup.html"
   },
   "content_scripts": [

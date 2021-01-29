@@ -26,6 +26,7 @@
   "files": [
     "dist",
     "src",
+    "templates",
     "!*.test.*",
     "!__snapshots__",
     "!__tests__"
@@ -35,9 +36,11 @@
     "change-case": "4.1.2",
     "copy-template-dir": "1.4.0",
     "enquirer": "2.3.6",
-    "signale": "1.4.0"
+    "signale": "1.4.0",
+    "uuid": "8.3.2"
   },
   "devDependencies": {
-    "@types/signale": "1.4.1"
+    "@types/signale": "1.4.1",
+    "@types/uuid": "8.3.0"
   }
 }

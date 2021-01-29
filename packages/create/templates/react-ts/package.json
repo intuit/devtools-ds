@@ -1,13 +1,13 @@
 {
-  "name": "{{project_name}}",
+  "name": "{{projectName}}",
   "version": "0.0.0",
   "private": true,
   "description": "A Devtools extension built using devtools-ds",
-  "author": "{{dev_name}} {{dev_email}}",
+  "author": "{{devName}} {{devEmail}}",
   "license": "UNLICENCED",
   "repository": {
     "type": "git",
-    "url": "https://github.com/{{project_org}}/{{project_name}}"
+    "url": "https://github.com/{{projectOrg}}/{{projectName}}"
   },
   "scripts": {
     "lint": "eslint src",
@@ -43,14 +43,12 @@
     "webpack-extension-reloader": "^1.1.4"
   },
   "dependencies": {
-    "@types/uuid": "^8.3.0",
     "auto": "^10.5.0",
     "change-case": "^4.1.2",
     "clsx": "^1.1.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-split": "^2.0.9",
-    "uuid": "^8.3.2",
     "webextension-polyfill-ts": "^0.21.0"
   },
   "lint-staged": {

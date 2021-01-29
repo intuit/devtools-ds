@@ -16,7 +16,7 @@ let update = {
   version: version,
   update_link: link,
 };
-updates.addons["{<addon-uuid>}"].updates.push(update);
+updates.addons["{{uuid}}"].updates.push(update);
 fs.writeFileSync(
   path.join(__dirname, "./updates/updates.json"),
   JSON.stringify(updates, null, 4)
