@@ -25,7 +25,11 @@ module.exports = {
     },
     reactDocgen: "react-docgen-typescript",
     reactDocgenTypescriptOptions: {
-      exclude: ["**/src/icons/**", "**/*.stories.*"],
+      exclude: [
+        "**/src/icons/**",
+        "**/*.stories.*",
+        "**/create/templates/**/*",
+      ],
       shouldRemoveUndefinedFromOptional: true,
       tsconfigPath,
       propFilter(prop) {

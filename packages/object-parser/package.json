@@ -18,6 +18,7 @@
     "clean": "ds clean",
     "build": "ds build",
     "start": "ds build --watch",
+    "storybook": "ds storybook start",
     "test": "ds test",
     "lint": "ds lint",
     "size": "ds size"
