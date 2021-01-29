@@ -30,3 +30,7 @@ Many of the high-level pieces are provided for you in our template:
 - [Background Script](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts): a single process that is always running for your extension. We primarily use it to pass messages between the extensions pages and the current tab.
 - [Content Script](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts): a sand-boxed script which has limited access to the current page. We use it to add our "runtime" script to the page and pass messages back to the background script.
 - Runtime: the script that actually runs in the page. It can send and receive messages from the content script.
+
+To learn more about Firefox extensions, web-ext, and the webextension-polyfill library that enables cross-browser extension development check out the [Firefox extension workshop site](https://extensionworkshop.com/documentation/develop/).
+
+To learn more about Chrome-specific development, visit the [chrome developers](https://developer.chrome.com/docs/extensions/mv2/getstarted/) site!
