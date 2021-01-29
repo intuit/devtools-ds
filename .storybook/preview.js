@@ -24,7 +24,12 @@ const compare = (order) => (a, b) => {
   return first < second ? -1 : second < first ? 1 : 0;
 };
 
-const sectionOrder = ["getting started", "components", "utilities"];
+const sectionOrder = [
+  "getting started",
+  "components",
+  "utilities",
+  "templates",
+];
 
 const sectionCompare = compare(sectionOrder);
 

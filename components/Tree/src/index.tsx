@@ -329,7 +329,7 @@ export const Tree = (props: TreeProps) => {
         onFocus={handleButtonFocus}
       >
         <span>
-          <span className={arrowClass} aria-hidden>
+          <span aria-hidden className={arrowClass}>
             ▶
           </span>
           <span>{label}</span>

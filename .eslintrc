@@ -8,5 +8,6 @@
     "jest/no-if": 0,
     "jsdoc/check-param-names": 0,
     "@typescript-eslint/ban-types": 0
-  }
+  },
+  "ignorePatterns": ["packages/create/templates/**/*"]
 }

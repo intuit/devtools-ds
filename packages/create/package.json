@@ -1,24 +1,24 @@
 {
-  "name": "@devtools-ds/object-parser",
+  "name": "@devtools-ds/create",
   "version": "0.131.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
+  "bin": "./dist/cjs/index.js",
   "types": "./dist",
   "repository": "https://github.com/intuit/devtools-ds",
   "author": "Tyler Krupicka github@tylerkrupicka.com",
   "contributors": [
     "Tyler Krupicka github@tylerkrupicka.com"
   ],
-  "license": "MIT",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
+  "license": "MIT",
   "scripts": {
     "clean": "ds clean",
     "build": "ds build",
     "start": "ds build --watch",
-    "storybook": "ds storybook start",
     "test": "ds test",
     "lint": "ds lint",
     "size": "ds size"
@@ -26,12 +26,21 @@
   "files": [
     "dist",
     "src",
+    "templates",
     "!*.test.*",
     "!__snapshots__",
     "!__tests__"
   ],
   "dependencies": {
-    "@babel/runtime": "~7.5.4"
+    "@babel/runtime": "~7.11.2",
+    "change-case": "4.1.2",
+    "copy-template-dir": "1.4.0",
+    "enquirer": "2.3.6",
+    "signale": "1.4.0",
+    "uuid": "8.3.2"
   },
-  "gitHead": "abfe550409142712633f50144b35102a0e62e43f"
+  "devDependencies": {
+    "@types/signale": "1.4.1",
+    "@types/uuid": "8.3.0"
+  }
 }

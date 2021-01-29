@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES6",
+    "lib": ["ESNext", "DOM"],
+    "outDir": "dist",
+    "jsx": "react",
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["./src/**/*", "./typings/**/*"]
+}
