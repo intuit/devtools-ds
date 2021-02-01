@@ -1,3 +1,16 @@
+# v0.132.1 (Mon Feb 01 2021)
+
+#### ⚠️ Pushed to `master`
+
+- remove extra console from create ([@tylerkrupicka](https://github.com/tylerkrupicka))
+- improve create script, make bin ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### Authors: 1
+
+- Tyler Krupicka ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+---
+
 # v0.132.0 (Mon Feb 01 2021)
 
 :tada: This release contains work from a new contributor! :tada:
