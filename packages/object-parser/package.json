@@ -1,6 +1,6 @@
 {
   "name": "@devtools-ds/object-parser",
-  "version": "0.131.0",
+  "version": "0.132.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist",
