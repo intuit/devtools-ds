@@ -14,6 +14,33 @@ Thank you, Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothi
 - `@devtools-ds/tree`
   - Tree "Play Button" Screen Reader Fix [#5](https://github.com/intuit/devtools-ds/pull/5) ([@tylerkrupicka](https://github.com/tylerkrupicka))
 
+#### ⚠️ Pushed to `master`
+
+- update yarn lock ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### Authors: 2
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- Tyler Krupicka ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+---
+
+# v0.132.0 (Mon Feb 01 2021)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie)), for all your work!
+
+#### 🚀 Enhancement
+
+- `@devtools-ds/tree`, `@devtools-ds/create`, `@devtools-ds/object-parser`
+  - Create [#6](https://github.com/intuit/devtools-ds/pull/6) ([@tylerkrupicka](https://github.com/tylerkrupicka) [@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### 🐛 Bug Fix
+
+- `@devtools-ds/tree`
+  - Tree "Play Button" Screen Reader Fix [#5](https://github.com/intuit/devtools-ds/pull/5) ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
 #### Authors: 2
 
 - Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
