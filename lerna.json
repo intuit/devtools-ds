@@ -3,7 +3,7 @@
     "components/*",
     "packages/*"
   ],
-  "version": "0.132.1",
+  "version": "0.132.2",
   "npmClient": "yarn",
   "useWorkspaces": true
 }
