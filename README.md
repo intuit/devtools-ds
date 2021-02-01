@@ -109,12 +109,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/adierkens"><img src="https://avatars.githubusercontent.com/u/13004162?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adam Dierkens</b></sub></a><br /><a href="#a11y-adierkens" title="Accessibility">️️️️♿️</a> <a href="https://github.com/design-systems/devtools-ds/commits?author=adierkens" title="Code">💻</a> <a href="#design-adierkens" title="Design">🎨</a> <a href="https://github.com/design-systems/devtools-ds/commits?author=adierkens" title="Documentation">📖</a> <a href="#example-adierkens" title="Examples">💡</a> <a href="#infra-adierkens" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-adierkens" title="Maintenance">🚧</a> <a href="#platform-adierkens" title="Packaging/porting to new platform">📦</a> <a href="https://github.com/design-systems/devtools-ds/commits?author=adierkens" title="Tests">⚠️</a> <a href="#tool-adierkens" title="Tools">🔧</a></td>
     <td align="center"><a href="https://github.com/ShelbyCohen"><img src="https://avatars.githubusercontent.com/u/7768053?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Shelby Cohen</b></sub></a><br /><a href="#a11y-ShelbyCohen" title="Accessibility">️️️️♿️</a> <a href="https://github.com/design-systems/devtools-ds/commits?author=ShelbyCohen" title="Code">💻</a> <a href="#design-ShelbyCohen" title="Design">🎨</a> <a href="https://github.com/design-systems/devtools-ds/commits?author=ShelbyCohen" title="Documentation">📖</a> <a href="https://github.com/design-systems/devtools-ds/commits?author=ShelbyCohen" title="Tests">⚠️</a></td>
     <td align="center"><a href="https://github.com/kharrop"><img src="https://avatars.githubusercontent.com/u/24794756?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kelly Harrop</b></sub></a><br /><a href="#design-kharrop" title="Design">🎨</a></td>
+    <td align="center"><a href="http://hipstersmoothie.com/"><img src="https://avatars.githubusercontent.com/u/1192452?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrew Lisowski</b></sub></a><br /><a href="https://github.com/design-systems/devtools-ds/commits?author=hipstersmoothie" title="Documentation">📖</a> <a href="#example-hipstersmoothie" title="Examples">💡</a> <a href="https://github.com/design-systems/devtools-ds/commits?author=hipstersmoothie" title="Code">💻</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
