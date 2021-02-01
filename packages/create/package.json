@@ -3,7 +3,7 @@
   "version": "0.132.0",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
-  "bin": "./dist/cjs/index.js",
+  "bin": "./bin/index.js",
   "types": "./dist",
   "repository": "https://github.com/intuit/devtools-ds",
   "author": "Tyler Krupicka github@tylerkrupicka.com",
@@ -26,6 +26,7 @@
   "files": [
     "dist",
     "src",
+    "bin",
     "templates",
     "!*.test.*",
     "!__snapshots__",
