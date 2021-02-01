@@ -75,6 +75,7 @@ const main = async () => {
         type: "input",
         name: "projectOrg",
         message: "What will your project's GitHub organization be?",
+        initial: paramCase(defaultName),
       },
     ])) as any;
 
