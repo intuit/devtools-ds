@@ -1,3 +1,15 @@
+# v0.132.2 (Mon Feb 01 2021)
+
+#### ⚠️ Pushed to `master`
+
+- fix template curly parsing ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### Authors: 1
+
+- Tyler Krupicka ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+---
+
 # v0.132.1 (Mon Feb 01 2021)
 
 #### ⚠️ Pushed to `master`
