@@ -3,54 +3,11 @@ import { render, waitFor, fireEvent } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
 import { ObjectInspector } from "./ObjectInspector";
 
-const testFunction = () => {
-  setTimeout(() => {}, 2000);
-};
-
-const promise = new Promise((resolve) => {
-  resolve(42);
-});
-
 const map = new Map();
 map.set("foo", "bar");
 
 const set = new Set();
 set.add("test");
-
-const data = {
-  string: "string",
-  boolean: true,
-  number: 100,
-  promise,
-  null: null,
-  map,
-  set,
-  function: testFunction,
-  error: new Error("You broke it"),
-  date: new Date(),
-  symbol: Symbol("foo"),
-  regex: /[A-Z]/g,
-  "test-undefined": undefined,
-  array: [
-    "fun",
-    {
-      object: {
-        nesting: true,
-      },
-    },
-    "three",
-    "four",
-    "five",
-    "six",
-    "seven",
-    "eight",
-    9,
-    10,
-  ],
-  object: {
-    working: "properly",
-  },
-};
 
 describe("ObjectInspector", () => {
   test("It opens to expand level", async () => {
