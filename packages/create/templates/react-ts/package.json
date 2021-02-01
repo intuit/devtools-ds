@@ -11,11 +11,11 @@
   },
   "scripts": {
     "lint": "eslint src",
-    "build": "webpack",
+    "build": "webpack --mode=production",
     "build:watch": "HMR=true NODE_ENV=development webpack --mode=development --watch",
     "watch:webext": "web-ext run --source-dir ./dist/",
     "watch:chrome": "npm run build:watch",
-    "watch:firefox": "run-p --parallel build:watch watch:webext",
+    "watch:firefox": "run-p build:watch watch:webext",
     "package:chrome": "node .circleci/build-zip.js",
     "package:firefox": "npm run build && web-ext sign --source-dir ./dist/ -a ./dist_firefox --channel=unlisted"
   },
@@ -43,6 +43,7 @@
     "webpack-extension-reloader": "^1.1.4"
   },
   "dependencies": {
+    "@devtools-ds/port-controller": "0.133.0",
     "auto": "^10.5.0",
     "change-case": "^4.1.2",
     "clsx": "^1.1.1",

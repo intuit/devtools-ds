@@ -1,9 +1,8 @@
 {
-  "name": "@devtools-ds/create",
+  "name": "@devtools-ds/port-controller",
   "version": "0.132.3",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
-  "bin": "./bin/index.js",
   "types": "./dist",
   "repository": "https://github.com/intuit/devtools-ds",
   "author": "Tyler Krupicka github@tylerkrupicka.com",
@@ -27,22 +26,12 @@
   "files": [
     "dist",
     "src",
-    "bin",
-    "templates",
     "!*.test.*",
     "!__snapshots__",
     "!__tests__"
   ],
   "dependencies": {
     "@babel/runtime": "~7.11.2",
-    "change-case": "4.1.2",
-    "copy-template-dir": "1.4.0",
-    "enquirer": "2.3.6",
-    "signale": "1.4.0",
-    "uuid": "8.3.2"
-  },
-  "devDependencies": {
-    "@types/signale": "1.4.1",
-    "@types/uuid": "8.3.0"
+    "webextension-polyfill-ts": "0.24.0"
   }
 }

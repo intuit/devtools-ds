@@ -1,7 +1,7 @@
 import { browser, Runtime } from "webextension-polyfill-ts";
 
 /** Manage port connections between the panel and page */
-export default class PortController<T> {
+export class PortController<T> {
   ports: { [key: number]: Array<Runtime.Port> };
 
   constructor() {
@@ -34,7 +34,7 @@ export default class PortController<T> {
   }
 
   // Return whether a tab has an active port.
-  exists(tabId: number) {
+  getPorts(tabId: number) {
     return this.ports[tabId];
   }
 
@@ -55,3 +55,5 @@ export default class PortController<T> {
     }
   }
 }
+
+export default PortController;
