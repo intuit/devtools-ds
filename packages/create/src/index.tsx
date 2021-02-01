@@ -110,7 +110,6 @@ const main = async () => {
     );
   } catch (e) {
     signale.complete("Cancelling template creation");
-    console.error(e);
   }
 };
 
