@@ -10,7 +10,7 @@ let BackgroundPort: Runtime.Port;
 let TabID: number | undefined;
 // Set up message connections
 const query = { active: true, currentWindow: true };
-browser.tabs.query(query).then((tabs) => {
+browser.tabs.query(query).then((tabs: any) => {
   TabID = tabs[0].id;
   BackgroundPort = browser.runtime.connect(undefined, { name: PORT_NAME });
   if (TabID) {
@@ -26,6 +26,22 @@ browser.tabs.query(query).then((tabs) => {
 /** Our React Popup Application */
 export const App = () => {
   const [value, setValue] = React.useState("Hello, Popup");
+
+  const inputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.currentTarget.value);
+  };
+
+  const buttonClick = () => {
+    if (TabID) {
+      const message: Message = {
+        type: "alert",
+        tabId: TabID,
+        source: POPUP_SOURCE,
+        value,
+      };
+      BackgroundPort.postMessage(message);
+    }
+  };
   return (
     <div className={styles.content}>
       <a href="https://github.com/intuit/devtools-ds">
@@ -43,24 +59,9 @@ export const App = () => {
           aria-label="Message to send"
           type="text"
           value={value}
-          onChange={(e) => {
-            setValue(e.currentTarget.value);
-          }}
+          onChange={inputChange}
         />
-        <button
-          type="button"
-          onClick={() => {
-            if (TabID) {
-              const message: Message = {
-                type: "alert",
-                tabId: TabID,
-                source: POPUP_SOURCE,
-                value,
-              };
-              BackgroundPort.postMessage(message);
-            }
-          }}
-        >
+        <button type="button" onClick={buttonClick}>
           Send
         </button>
       </div>

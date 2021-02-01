@@ -19,6 +19,21 @@ BackgroundPort.postMessage(connectMessage);
 /** Our React Panel Application */
 export const App = () => {
   const [value, setValue] = React.useState("Hello, Panel");
+
+  const inputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.currentTarget.value);
+  };
+
+  const buttonClick = () => {
+    const message: Message = {
+      type: "alert",
+      tabId: browser.devtools.inspectedWindow.tabId,
+      source: PANEL_SOURCE,
+      value,
+    };
+    BackgroundPort.postMessage(message);
+  };
+
   return (
     <div className={styles.content}>
       <a href="https://github.com/intuit/devtools-ds">
@@ -38,22 +53,9 @@ export const App = () => {
           type="text"
           aria-label="Message to send"
           value={value}
-          onChange={(e) => {
-            setValue(e.currentTarget.value);
-          }}
+          onChange={inputChange}
         />
-        <button
-          type="button"
-          onClick={() => {
-            const message: Message = {
-              type: "alert",
-              tabId: browser.devtools.inspectedWindow.tabId,
-              source: PANEL_SOURCE,
-              value,
-            };
-            BackgroundPort.postMessage(message);
-          }}
-        >
+        <button type="button" onClick={buttonClick}>
           Send Message
         </button>
       </div>
