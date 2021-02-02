@@ -34,6 +34,7 @@
     "!__tests__"
   ],
   "dependencies": {
+    "@alumna/reflect": "1.0.5",
     "@babel/runtime": "~7.11.2",
     "change-case": "4.1.2",
     "copy-template-dir": "1.4.0",
