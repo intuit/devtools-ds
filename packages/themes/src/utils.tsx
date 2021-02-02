@@ -32,7 +32,7 @@ export type ThemeableElement<T extends keyof JSX.IntrinsicElements> = Element<
   Themeable;
 
 export const ThemeContext = React.createContext<Themeable>({
-  theme: "firefox",
+  theme: "chrome",
   colorScheme: "light",
 });
 
@@ -132,7 +132,7 @@ export const useTheme = (
 ) => {
   const themeContext = React.useContext(ThemeContext);
 
-  const currentTheme = props.theme || themeContext.theme || "firefox";
+  const currentTheme = props.theme || themeContext.theme || "chrome";
   const currentColorScheme =
     props.colorScheme || themeContext.colorScheme || "light";
   const themeClass = makeClass(
@@ -160,5 +160,5 @@ interface LightDarkTheme {
 
 type CustomTheme = BasicTheme | LightDarkTheme;
 
-export type ComponentTheme = Required<Record<"firefox", CustomTheme>> &
+export type ComponentTheme = Required<Record<"chrome", CustomTheme>> &
   Partial<Record<Theme, CustomTheme>>;

@@ -23,10 +23,6 @@
     outline: none;
     padding-left: 5px;
 
-    .arrow {
-      color: rgb(110, 110, 110);
-    }
-
     &:focus {
       background-color: @theme focusColor;
       color: @theme focusTextColor;
@@ -34,6 +30,10 @@
       &.focusWhite {
         * {
           color: white;
+        }
+
+        .arrow {
+          border-color: transparent transparent transparent white;
         }
       }
     }
@@ -49,17 +49,20 @@
 
 /* The expand/collapse arrow character */
 .arrow {
+  margin: 0 0.7em 0 0;
   display: inline-block;
-  margin-right: 5px;
-  user-select: none;
-  transform: rotateZ(0deg);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.4em 0 0.4em 0.4em;
+  border-color: transparent transparent transparent @theme arrowColor;
   position: relative;
-  bottom: 0.1em;
-  transition: transform 0.1s ease-in-out;
+  vertical-align: baseline;
+  right: -0.3em;
 
   &.open {
     transform: rotateZ(90deg);
-    bottom: 0;
+    bottom: -0.05em;
   }
 
   @media screen and (prefers-reduced-motion: reduce) {

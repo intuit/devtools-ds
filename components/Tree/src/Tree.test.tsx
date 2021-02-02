@@ -103,7 +103,7 @@ describe("Tree", () => {
     // Test active element
     expect(onSelect).toHaveBeenCalled();
 
-    await act(() => {
+    act(() => {
       fireEvent.keyDown(document.activeElement || document, {
         key: "ArrowDown",
         keyCode: 40,
@@ -156,7 +156,7 @@ describe("Tree", () => {
     });
 
     expect(document.activeElement?.isSameNode(leaf)).not.toBe(true);
-    expect(document.activeElement?.textContent).toBe("▶Branch One");
+    expect(document.activeElement?.textContent).toBe("Branch One");
   });
 
   test("Navigates using right arrow", () => {

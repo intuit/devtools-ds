@@ -19,13 +19,13 @@ interface TooltipProps {
 }
 
 const themes = {
-  firefox: {
-    name: "FireFox",
-    icon: <FireFox />,
-  },
   chrome: {
     name: "Chrome",
     icon: <Chrome />,
+  },
+  firefox: {
+    name: "FireFox",
+    icon: <FireFox />,
   },
 } as const;
 
@@ -54,7 +54,7 @@ const restoreLocalStorage = (defaultTheme?: Partial<State>): State => {
   }
 
   return {
-    theme: "firefox",
+    theme: "chrome",
     colorScheme: "light",
     ...defaultTheme,
   };
@@ -62,7 +62,7 @@ const restoreLocalStorage = (defaultTheme?: Partial<State>): State => {
 
 export const ThemeTool = () => {
   const defaultState = useParameter<Partial<State>>(PARAMETER_NAME, {
-    theme: "firefox",
+    theme: "chrome",
     colorScheme: "light",
   });
   const initial = restoreLocalStorage(defaultState);

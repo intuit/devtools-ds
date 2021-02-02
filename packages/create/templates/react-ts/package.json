@@ -12,7 +12,7 @@
   "scripts": {
     "lint": "eslint src",
     "build": "webpack --mode=production",
-    "build:watch": "HMR=true NODE_ENV=development webpack --mode=development --watch",
+    "build:watch": "cross-env HMR=true NODE_ENV=development webpack --mode=development --watch",
     "watch:webext": "web-ext run --source-dir ./dist/",
     "watch:chrome": "npm run build:watch",
     "watch:firefox": "run-p build:watch watch:webext",
@@ -23,6 +23,7 @@
     "@design-systems/eslint-config": "^2.11.0",
     "@types/react-dom": "^16.9.8",
     "copy-webpack-plugin": "^6.2.1",
+    "cross-env": "7.0.3",
     "css-loader": "^3.4.2",
     "file-loader": "^6.1.1",
     "html-webpack-plugin": "^4.5.0",
