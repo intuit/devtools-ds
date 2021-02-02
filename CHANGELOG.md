@@ -1,3 +1,16 @@
+# v1.0.0 (Tue Feb 02 2021)
+
+#### 💥 Breaking Change
+
+- `@devtools-ds/console`, `@devtools-ds/object-inspector`, `@devtools-ds/tree`, `@devtools-ds/create`, `@devtools-ds/storybook-theme-addon`, `@devtools-ds/themes`
+  - Initial release [#8](https://github.com/intuit/devtools-ds/pull/8) ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### Authors: 1
+
+- Tyler Krupicka ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+---
+
 # v0.133.0 (Mon Feb 01 2021)
 
 #### 🚀 Enhancement

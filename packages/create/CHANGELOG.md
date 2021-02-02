@@ -1,3 +1,20 @@
+# v1.0.0 (Tue Feb 02 2021)
+
+#### 💥 Breaking Change
+
+- Initial release [#8](https://github.com/intuit/devtools-ds/pull/8) ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### 🐛 Bug Fix
+
+- fix mozilla guide link ([@tylerkrupicka](https://github.com/tylerkrupicka))
+- add cross-env to template ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### Authors: 1
+
+- Tyler Krupicka ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+---
+
 # v0.133.0 (Mon Feb 01 2021)
 
 #### 🚀 Enhancement

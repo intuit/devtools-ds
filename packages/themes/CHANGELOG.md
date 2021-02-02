@@ -1,3 +1,19 @@
+# v1.0.0 (Tue Feb 02 2021)
+
+#### 💥 Breaking Change
+
+- Initial release [#8](https://github.com/intuit/devtools-ds/pull/8) ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### 🐛 Bug Fix
+
+- make chrome default theme ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### Authors: 1
+
+- Tyler Krupicka ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+---
+
 # v0.130.5 (Sun Jan 24 2021)
 
 #### ⚠️ Pushed to `master`

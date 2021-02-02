@@ -1,3 +1,24 @@
+# v1.0.0 (Tue Feb 02 2021)
+
+#### 💥 Breaking Change
+
+- Initial release [#8](https://github.com/intuit/devtools-ds/pull/8) ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### 🐛 Bug Fix
+
+- try to center on windows and mac ([@tylerkrupicka](https://github.com/tylerkrupicka))
+- make arrow spacing dynamic ([@tylerkrupicka](https://github.com/tylerkrupicka))
+- pure css arrow ([@tylerkrupicka](https://github.com/tylerkrupicka))
+- theme arrow ([@tylerkrupicka](https://github.com/tylerkrupicka))
+- fix tests ([@tylerkrupicka](https://github.com/tylerkrupicka))
+- update tree arrow ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### Authors: 1
+
+- Tyler Krupicka ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+---
+
 # v0.132.0 (Mon Feb 01 2021)
 
 :tada: This release contains work from a new contributor! :tada:
