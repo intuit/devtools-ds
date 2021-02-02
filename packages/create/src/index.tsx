@@ -1,5 +1,6 @@
 import { prompt } from "enquirer";
 import signale from "signale";
+import reflect from "@alumna/reflect";
 import { execSync } from "child_process";
 import { v4 as uuid } from "uuid";
 import { paramCase, constantCase, capitalCase } from "change-case";
@@ -95,20 +96,28 @@ const main = async () => {
     signale.success("Recorded responses");
     signale.await(`Loading ${responses.template} template..`);
 
-    copy(
-      getTemplatePath(responses.template),
-      `${process.cwd()}/${responses.projectName}/`,
-      responses,
-      (err, createdFiles) => {
-        if (err) throw err;
-        createdFiles.forEach((filePath) =>
-          signale.complete(`Created ${filePath}`)
-        );
-        signale.success(
-          `Navigate into ${responses.projectName}/ to get started!`
-        );
-      }
-    );
+    const srcPath = getTemplatePath(responses.template);
+    const outPath = `${process.cwd()}/${responses.projectName}/`;
+
+    copy(srcPath, outPath, responses, async (err, createdFiles) => {
+      if (err) throw err;
+      createdFiles.forEach((filePath) =>
+        signale.complete(`Created ${filePath}`)
+      );
+
+      // Copy assets which may get damaged by the templates
+      await reflect({
+        src: `${srcPath}/src/assets`,
+        dest: `${outPath}/src/assets`,
+        recursive: false,
+      });
+
+      signale.complete(`Copied assets`);
+
+      signale.success(
+        `Navigate into ${responses.projectName}/ to get started!`
+      );
+    });
   } catch (e) {
     signale.complete("Cancelling template creation");
   }

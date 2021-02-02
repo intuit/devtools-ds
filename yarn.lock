@@ -16,6 +16,11 @@
     "@storybook/theming" "^6.0.0"
     markdown-to-jsx "^6.10.3"
 
+"@alumna/reflect@1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@alumna/reflect/-/reflect-1.0.5.tgz#b8ea84a86192a169f878635dff28e52616f42013"
+  integrity sha512-LXoJQlILbERJOtFRJlAYO9najItVlMelVlTpWa6Y+irwXHa/5RoY6lOEON79SoupryEmaU5Qe0n07r3MLVb97w==
+
 "@atomist/slack-messages@~1.1.0":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@atomist/slack-messages/-/slack-messages-1.1.1.tgz#9de42932e89065fb4fe4842978ca2d1ed3424cea"
@@ -1701,7 +1706,7 @@
     react-merge-refs "^1.0.0"
 
 "@devtools-ds/icon@link:components/Icon":
-  version "0.132.3"
+  version "1.0.0"
   dependencies:
     "@babel/runtime" "7.7.2"
     "@design-systems/utils" "2.12.0"
@@ -1709,14 +1714,14 @@
     clsx "1.1.0"
 
 "@devtools-ds/node@link:components/Node":
-  version "0.132.3"
+  version "1.0.0"
   dependencies:
     "@babel/runtime" "7.7.2"
     "@devtools-ds/themes" "link:packages/themes"
     clsx "1.1.0"
 
 "@devtools-ds/object-inspector@link:components/ObjectInspector":
-  version "0.132.3"
+  version "1.0.0"
   dependencies:
     "@babel/runtime" "7.7.2"
     "@devtools-ds/object-parser" "link:packages/object-parser"
@@ -1725,17 +1730,17 @@
     clsx "1.1.0"
 
 "@devtools-ds/object-parser@link:packages/object-parser":
-  version "0.132.3"
+  version "1.0.0"
   dependencies:
     "@babel/runtime" "~7.5.4"
 
 "@devtools-ds/storybook-utils@link:packages/storybook-utils":
-  version "0.132.3"
+  version "1.0.0"
   dependencies:
     "@babel/runtime" "~7.5.4"
 
 "@devtools-ds/themes@link:packages/themes":
-  version "0.132.3"
+  version "1.0.0"
   dependencies:
     "@babel/runtime" "~7.5.4"
     "@design-systems/utils" "2.12.0"
@@ -1743,7 +1748,7 @@
     react-device-detect "1.15.0"
 
 "@devtools-ds/tree@link:components/Tree":
-  version "0.132.3"
+  version "1.0.0"
   dependencies:
     "@babel/runtime" "7.7.2"
     "@devtools-ds/themes" "link:packages/themes"
