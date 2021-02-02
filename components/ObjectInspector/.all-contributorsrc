@@ -11,10 +11,10 @@
   "commitConvention": "eslint",
   "contributors": [
     {
-      "login": "tylerkurpicka",
+      "login": "tylerkrupicka",
       "name": "Tyler Krupicka",
       "avatar_url": "https://avatars.githubusercontent.com/u/5761061?v=4",
-      "profile": "https://github.com/tylerkurpicka",
+      "profile": "http://tylerkrupicka.com/",
       "contributions": [
         "code",
         "doc",
@@ -32,18 +32,6 @@
       "contributions": [
         "code",
         "doc",
-        "example",
-        "test"
-      ]
-    },
-    {
-      "login": "tylerkrupicka",
-      "name": "Tyler Krupicka",
-      "avatar_url": "https://avatars.githubusercontent.com/u/5761061?v=4",
-      "profile": "http://tylerkrupicka.com/",
-      "contributions": [
-        "doc",
-        "code",
         "example",
         "test"
       ]
