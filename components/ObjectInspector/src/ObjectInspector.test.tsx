@@ -38,7 +38,7 @@ describe("ObjectInspector", () => {
         },
       },
     };
-    await act(() => {
+    await act(async () => {
       const { getByText } = render(
         <ObjectInspector
           data={nested}
@@ -48,7 +48,7 @@ describe("ObjectInspector", () => {
       );
       waitFor(() => expect(getByText("<prototype>")).not.toBeDefined());
     });
-    await act(() => {
+    act(() => {
       const { getByText } = render(
         <ObjectInspector data={nested} expandLevel={3} />
       );
@@ -79,9 +79,7 @@ describe("ObjectInspector", () => {
 
       const two = getByText("two:");
 
-      await act(() => {
-        fireEvent.click(two);
-      });
+      fireEvent.click(two);
 
       expect(onSelect).toHaveBeenCalledTimes(1);
       expect(onSelect.mock.calls[0][0].key).toBe("two");

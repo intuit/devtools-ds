@@ -3,7 +3,7 @@
 exports[`Console It matches the snapshot 1`] = `
 <div>
   <div
-    class="console firefox light"
+    class="console chrome light"
   >
     <div
       class="resultsScrollWrapper"
