@@ -254,10 +254,10 @@ export const Tree = (props: TreeProps) => {
 
   /** Get the styles for padding based on depth */
   const getPaddingStyles = (depth: number) => {
-    const space = depth * 10; // 10 pixels
+    const space = depth * 0.9; // 10 pixels
     return {
-      paddingLeft: `${space}px`,
-      width: `calc(100% - ${space}px)`,
+      paddingLeft: `${space}em`,
+      width: `calc(100% - ${space}em)`,
     };
   };
 
