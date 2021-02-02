@@ -57,12 +57,12 @@
   border-width: 0.4em 0 0.4em 0.4em;
   border-color: transparent transparent transparent @theme arrowColor;
   position: relative;
-  bottom: -0.05em;
+  vertical-align: baseline;
   right: -0.3em;
 
   &.open {
     transform: rotateZ(90deg);
-    bottom: -0.1em;
+    bottom: -0.05em;
   }
 
   @media screen and (prefers-reduced-motion: reduce) {
