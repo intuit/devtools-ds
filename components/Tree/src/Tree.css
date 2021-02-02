@@ -50,11 +50,12 @@
 /* The expand/collapse arrow character */
 .arrow {
   display: inline-block;
-  margin-right: 5px;
+  font-size: 1.3em;
+  margin-right: 2px;
   user-select: none;
   transform: rotateZ(0deg);
   position: relative;
-  bottom: 0.1em;
+  bottom: -0.1em;
   transition: transform 0.1s ease-in-out;
 
   &.open {

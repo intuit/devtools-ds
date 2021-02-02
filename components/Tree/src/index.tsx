@@ -330,7 +330,7 @@ export const Tree = (props: TreeProps) => {
       >
         <span>
           <span aria-hidden className={arrowClass}>
-            ▶
+            ⏵
           </span>
           <span>{label}</span>
         </span>
