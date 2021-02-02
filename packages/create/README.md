@@ -20,7 +20,7 @@ Instructions for development will be included in the `README.md` for your chosen
 
 ## Extension Development Basics
 
-MDN has a great [guide](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Web_accessible_resources) outlining the major components of a browser extension. We recommend taking some time to understand the pieces, but ideally the templates will allow you to focus on your extension code instead of browser APIs.
+MDN has a great [guide](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) outlining the major components of a browser extension. We recommend taking some time to understand the pieces, but ideally the templates will allow you to focus on your extension code instead of browser APIs.
 
 Many of the high-level pieces are provided for you in our template:
 
