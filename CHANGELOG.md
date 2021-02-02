@@ -1,3 +1,16 @@
+# v1.0.1 (Tue Feb 02 2021)
+
+#### 🐛 Bug Fix
+
+- `@devtools-ds/create`
+  - Fix Template Assets [#9](https://github.com/intuit/devtools-ds/pull/9) ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### Authors: 1
+
+- Tyler Krupicka ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+---
+
 # v1.0.0 (Tue Feb 02 2021)
 
 #### 💥 Breaking Change
