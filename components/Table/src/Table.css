@@ -2,7 +2,6 @@
   width: 100%;
   table-layout: fixed;
   font-family: sans-serif;
-  font-size: 11px;
   border-collapse: collapse;
   color: @theme textColor;
 

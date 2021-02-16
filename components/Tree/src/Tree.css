@@ -49,16 +49,14 @@
 
 /* The expand/collapse arrow character */
 .arrow {
-  margin: 0 0.7em 0 0;
+  margin: 0 0.7em 0 0.1em;
   display: inline-block;
   width: 0;
   height: 0;
   border-style: solid;
   border-width: 0.4em 0 0.4em 0.4em;
   border-color: transparent transparent transparent @theme arrowColor;
-  position: relative;
   vertical-align: baseline;
-  right: -0.3em;
 
   &.open {
     transform: rotateZ(90deg);
