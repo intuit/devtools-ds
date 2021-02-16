@@ -1,6 +1,6 @@
 .divider {
   width: 1px;
-  height: 22px;
+  height: 2em;
   background-color: @theme dividerColor;
 }
 
@@ -19,9 +19,9 @@
 }
 
 .button {
-  padding: 6px 8px;
-  font-size: 13px;
-  line-height: 16px;
+  padding: 6px;
+  font-size: 1.1em;
+  height: 2.2em;
   color: @theme textColor;
   display: flex;
   flex-direction: row;
@@ -79,13 +79,14 @@
 }
 
 .icon {
-  height: 16px;
-  width: 16px;
-  font-size: 16px;
+  height: 1.2em;
+  width: 1.2em;
+  font-size: 1.2em;
+  margin-bottom: -0.2em;
 }
 
 .icon:not(:last-child) {
-  margin-right: 4px;
+  margin-right: 0.3em;
 }
 
 .left,
