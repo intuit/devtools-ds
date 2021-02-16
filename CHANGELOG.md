@@ -1,3 +1,22 @@
+# v1.0.2 (Mon Feb 15 2021)
+
+#### 🐛 Bug Fix
+
+- `@devtools-ds/navigation`, `@devtools-ds/table`, `@devtools-ds/tree`
+  - Spacing & Sizing Updates (Tree, Table, Nav) [#12](https://github.com/intuit/devtools-ds/pull/12) ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### 📝 Documentation
+
+- Add Download Shield [#11](https://github.com/intuit/devtools-ds/pull/11) ([@tylerkrupicka](https://github.com/tylerkrupicka))
+- `@devtools-ds/console`, `@devtools-ds/dom-inspector`, `@devtools-ds/diagnostic`, `@devtools-ds/icon`, `@devtools-ds/navigation`, `@devtools-ds/node`, `@devtools-ds/object-inspector`, `@devtools-ds/table`, `@devtools-ds/tree`
+  - Fix Component All Contributors [#10](https://github.com/intuit/devtools-ds/pull/10) ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### Authors: 1
+
+- Tyler Krupicka ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+---
+
 # v1.0.1 (Tue Feb 02 2021)
 
 #### 🐛 Bug Fix

@@ -1,3 +1,21 @@
+# v1.0.2 (Mon Feb 15 2021)
+
+#### 🐛 Bug Fix
+
+- Spacing & Sizing Updates (Tree, Table, Nav) [#12](https://github.com/intuit/devtools-ds/pull/12) ([@tylerkrupicka](https://github.com/tylerkrupicka))
+- fix font scaling in table ([@tylerkrupicka](https://github.com/tylerkrupicka))
+- fix my clone in contributors ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### 📝 Documentation
+
+- Fix Component All Contributors [#10](https://github.com/intuit/devtools-ds/pull/10) ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### Authors: 1
+
+- Tyler Krupicka ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+---
+
 # v0.131.0 (Tue Jan 26 2021)
 
 #### 🚀 Enhancement

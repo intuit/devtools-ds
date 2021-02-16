@@ -1,3 +1,19 @@
+# v1.0.2 (Mon Feb 15 2021)
+
+#### 🐛 Bug Fix
+
+- fix my clone in contributors ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### 📝 Documentation
+
+- Fix Component All Contributors [#10](https://github.com/intuit/devtools-ds/pull/10) ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### Authors: 1
+
+- Tyler Krupicka ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+---
+
 # v1.0.0 (Tue Feb 02 2021)
 
 #### 💥 Breaking Change
