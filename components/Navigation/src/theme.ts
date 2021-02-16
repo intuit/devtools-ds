@@ -4,8 +4,8 @@ import { firefox, chrome } from "@devtools-ds/themes";
 const NavTheme = (): ComponentTheme => ({
   firefox: {
     light: {
-      backgroundColor: firefox.light.backgroundColor,
-      textColor: firefox.light.textColor,
+      backgroundColor: firefox.light.gray01,
+      textColor: firefox.light.gray06,
       selectedTextColor: firefox.light.blue04,
       selectedIconColor: firefox.light.blue04,
       selectedBarColor: firefox.light.blue04,
