@@ -72,6 +72,14 @@ export const DisablePrototypes = () => (
   <ObjectInspector includePrototypes={false} data={data} />
 );
 
+export const NamedObject = () => (
+  <ObjectInspector name="onSelect()" data={data} />
+);
+
+export const NamedValue = () => (
+  <ObjectInspector name="value" data="Some Data" />
+);
+
 export const FontInheritance = () => (
   <div style={{ fontSize: `16px` }}>
     <ObjectInspector sortKeys={false} data={data} />

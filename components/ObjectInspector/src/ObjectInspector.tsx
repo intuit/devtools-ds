@@ -7,6 +7,7 @@ import {
   ResolvedASTNode,
 } from "@devtools-ds/object-parser";
 import { ThemeableElement, useTheme, ThemeProvider } from "@devtools-ds/themes";
+import { ObjectInspectorContext } from "./Context";
 import ObjectInspectorItem from "./ObjectInspectorItem";
 
 import styles from "./ObjectInspector.css";
@@ -15,6 +16,8 @@ interface ObjectInspectorProps
   extends Omit<ThemeableElement<"div">, "onSelect"> {
   /** JSON data to render in the tree. */
   data: SupportedTypes;
+  /** The key for the root object */
+  name?: string;
   /** Depth of the tree that is open at first render. */
   expandLevel: number;
   /** Whether to sort keys like the browsers do. */
@@ -36,6 +39,7 @@ export const ObjectInspector = (props: ObjectInspectorProps) => {
     theme,
     colorScheme,
     onSelect,
+    name,
     ...html
   } = props;
   const [ast, setAST] = useState<ASTNode | undefined>(undefined);
@@ -61,11 +65,13 @@ export const ObjectInspector = (props: ObjectInspectorProps) => {
     >
       {ast && (
         <ThemeProvider theme={currentTheme} colorScheme={currentColorScheme}>
-          <ObjectInspectorItem
-            ast={ast}
-            expandLevel={expandLevel}
-            onSelect={onSelect}
-          />
+          <ObjectInspectorContext.Provider value={{ name }}>
+            <ObjectInspectorItem
+              ast={ast}
+              expandLevel={expandLevel}
+              onSelect={onSelect}
+            />
+          </ObjectInspectorContext.Provider>
         </ThemeProvider>
       )}
     </div>

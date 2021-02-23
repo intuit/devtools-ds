@@ -56,6 +56,26 @@ describe("ObjectInspector", () => {
     });
   });
 
+  test("Displays names", async () => {
+    const nested = {
+      one: {
+        two: {
+          three: "test",
+        },
+      },
+    };
+    await act(async () => {
+      const { getByText } = render(<ObjectInspector data={nested} />);
+      waitFor(() => expect(getByText("nameTest:")).not.toBeDefined());
+    });
+    act(() => {
+      const { getByText } = render(
+        <ObjectInspector data={nested} name="nameTest" />
+      );
+      waitFor(() => expect(getByText("nameTest:")).toBeDefined());
+    });
+  });
+
   test("It calls onSelect correctly", async () => {
     const onSelect = jest.fn();
     const nested = {
@@ -77,7 +97,7 @@ describe("ObjectInspector", () => {
 
       await waitFor(() => expect(getByText('"test"')).toBeDefined());
 
-      const two = getByText("two:");
+      const two = getByText("two");
 
       fireEvent.click(two);
 

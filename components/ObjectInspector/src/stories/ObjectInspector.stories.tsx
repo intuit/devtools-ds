@@ -1,5 +1,5 @@
 import React from "react";
-import { boolean, number } from "@storybook/addon-knobs";
+import { boolean, number, text } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 import { ObjectInspector } from "../ObjectInspector";
 import notes from "../../README.md";
@@ -59,11 +59,20 @@ const data = {
   },
 };
 
+const nested = {
+  one: {
+    two: {
+      three: "test",
+    },
+  },
+};
+
 export const Playground = () => {
   const onSelect = action("onSelect");
   return (
     <ObjectInspector
-      data={data}
+      data={nested}
+      name={text("Name", "")}
       expandLevel={number("Expand Level", 1)}
       sortKeys={boolean("Sort Keys", true)}
       includePrototypes={boolean("Include Prototypes", true)}

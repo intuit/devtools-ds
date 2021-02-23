@@ -3,6 +3,7 @@ import makeClass from "clsx";
 import { ThemeableElement, useTheme } from "@devtools-ds/themes";
 import { ASTNode, isObject, getPromiseState } from "@devtools-ds/object-parser";
 import styles from "./ObjectInspector.css";
+import { ObjectInspectorContext } from "./Context";
 
 interface ObjectValueProps extends ThemeableElement<"span"> {
   /** Type of object. */
@@ -18,6 +19,7 @@ interface ObjectValueProps extends ThemeableElement<"span"> {
  * @param value - The value string
  * @param valueClass - The class to apply to the value
  * @param showKey - Whether or not to show the key with the value
+ * @param name - The name if the value is the root
  * @param depth - Current depth (so we don't put a key on root)
  */
 const buildValue = (
@@ -25,13 +27,15 @@ const buildValue = (
   value: React.ReactNode,
   valueClass: string,
   showKey: boolean,
+  name: string,
   depth: number
 ) => {
-  const computedKey = key.includes("-") ? `"${key}"` : key;
+  let computedKey = key.includes("-") ? `"${key}"` : key;
   const isRoot = depth <= 0;
+  if (isRoot && name) computedKey = name;
   return (
     <span className={styles.text}>
-      {!isRoot && showKey && (
+      {(!isRoot || name) && showKey && (
         <>
           <span className={styles.key}>{computedKey}</span>
           <span>:&nbsp;</span>
@@ -45,6 +49,8 @@ const buildValue = (
 
 /** Display a leaf key-value pair with appropriate styles. */
 export const ObjectValue = (props: ObjectValueProps) => {
+  const context = React.useContext(ObjectInspectorContext);
+  const name = context?.name || "";
   const { ast, theme, showKey, colorScheme, className, ...html } = props;
   const { themeClass } = useTheme({ theme, colorScheme }, styles);
   const [asyncValue, setAsyncValue] = useState(<span />);
@@ -61,6 +67,7 @@ export const ObjectValue = (props: ObjectValueProps) => {
             `Promise { "${await getPromiseState(promise)}" }`,
             styles.key,
             showKey,
+            name,
             ast.depth
           )
         );
@@ -77,6 +84,7 @@ export const ObjectValue = (props: ObjectValueProps) => {
       String(ast.value),
       styles.number,
       showKey,
+      name,
       ast.depth
     );
   } else if (typeof ast.value === "boolean") {
@@ -86,6 +94,7 @@ export const ObjectValue = (props: ObjectValueProps) => {
       String(ast.value),
       styles.boolean,
       showKey,
+      name,
       ast.depth
     );
   } else if (typeof ast.value === "string") {
@@ -95,6 +104,7 @@ export const ObjectValue = (props: ObjectValueProps) => {
       `"${ast.value}"`,
       styles.string,
       showKey,
+      name,
       ast.depth
     );
   } else if (typeof ast.value === "undefined") {
@@ -104,6 +114,7 @@ export const ObjectValue = (props: ObjectValueProps) => {
       "undefined",
       styles.undefined,
       showKey,
+      name,
       ast.depth
     );
   } else if (typeof ast.value === "symbol") {
@@ -113,6 +124,7 @@ export const ObjectValue = (props: ObjectValueProps) => {
       ast.value.toString(),
       styles.string,
       showKey,
+      name,
       ast.depth
     );
   } else if (typeof ast.value === "function") {
@@ -122,12 +134,20 @@ export const ObjectValue = (props: ObjectValueProps) => {
       `${ast.value.name}()`,
       styles.key,
       showKey,
+      name,
       ast.depth
     );
   } else if (typeof ast.value === "object") {
     if (ast.value === null) {
       // Null
-      value = buildValue(ast.key, "null", styles.null, showKey, ast.depth);
+      value = buildValue(
+        ast.key,
+        "null",
+        styles.null,
+        showKey,
+        name,
+        ast.depth
+      );
     } else if (Array.isArray(ast.value)) {
       // Array
       value = buildValue(
@@ -135,6 +155,7 @@ export const ObjectValue = (props: ObjectValueProps) => {
         `Array(${ast.value.length})`,
         styles.key,
         showKey,
+        name,
         ast.depth
       );
     } else if (ast.value instanceof Date) {
@@ -144,6 +165,7 @@ export const ObjectValue = (props: ObjectValueProps) => {
         `Date ${ast.value.toString()}`,
         styles.value,
         showKey,
+        name,
         ast.depth
       );
     } else if (ast.value instanceof RegExp) {
@@ -153,6 +175,7 @@ export const ObjectValue = (props: ObjectValueProps) => {
         ast.value.toString(),
         styles.regex,
         showKey,
+        name,
         ast.depth
       );
     } else if (ast.value instanceof Error) {
@@ -162,11 +185,25 @@ export const ObjectValue = (props: ObjectValueProps) => {
         ast.value.toString(),
         styles.error,
         showKey,
+        name,
         ast.depth
       );
+<<<<<<< HEAD
+=======
+    } else if (typeof Buffer !== "undefined" && Buffer.isBuffer(ast.value)) {
+      // Buffer
+      value = buildValue(
+        ast.key,
+        `Buffer[${ast.value.length}]`,
+        styles.value,
+        showKey,
+        name,
+        ast.depth
+      );
+>>>>>>> Add name, fix colon styling
     } else if (isObject(ast.value)) {
       // Object
-      value = buildValue(ast.key, "{…}", styles.key, showKey, ast.depth);
+      value = buildValue(ast.key, "{…}", styles.key, showKey, name, ast.depth);
     } else {
       // WeakMap, WeakSet, Custom Classes, etc
       value = buildValue(
@@ -174,6 +211,7 @@ export const ObjectValue = (props: ObjectValueProps) => {
         ast.value.constructor.name,
         styles.key,
         showKey,
+        name,
         ast.depth
       );
     }

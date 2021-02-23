@@ -11,6 +11,7 @@ import {
   ASTNode,
 } from "@devtools-ds/object-parser";
 import ObjectValue from "./ObjectValue";
+import { ObjectInspectorContext } from "./Context";
 import styles from "./ObjectInspector.css";
 
 interface ObjectLabelProps extends ThemeableElement<"span"> {
@@ -176,6 +177,7 @@ export const ObjectLabel = (props: ObjectLabelProps) => {
     className,
     ...html
   } = props;
+  const { name } = React.useContext(ObjectInspectorContext);
   const { themeClass, currentTheme } = useTheme({ theme, colorScheme }, styles);
   const isPrototype = ast.isPrototype || false;
   const classes = makeClass(styles.objectLabel, themeClass, className, {
@@ -186,10 +188,20 @@ export const ObjectLabel = (props: ObjectLabelProps) => {
 
   /** The key for the node */
   const Key = () => {
+    let { key } = ast;
+    if (isRoot && name) key = name;
+
+    if (isRoot && !name) {
+      return null;
+    }
+
     return (
-      <span className={isPrototype ? styles.prototype : styles.key}>
-        {isRoot ? "" : `${ast.key}: `}
-      </span>
+      <>
+        <span className={isPrototype ? styles.prototype : styles.key}>
+          {key}
+        </span>
+        {key && <span className={styles.text}>:&nbsp;</span>}
+      </>
     );
   };
 
