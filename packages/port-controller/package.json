@@ -13,6 +13,7 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
+  "sideEffects": false,
   "license": "MIT",
   "scripts": {
     "clean": "ds clean",
