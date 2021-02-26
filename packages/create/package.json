@@ -1,6 +1,6 @@
 {
   "name": "@devtools-ds/create",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "bin": "./bin/index.js",
