@@ -2,10 +2,16 @@ import React from "react";
 import { all } from "./themes";
 import { ThemeableElement, ThemeContext } from "./utils";
 
-let isFirefox = false;
-if (window?.navigator?.userAgent) {
-  isFirefox = window.navigator.userAgent.toLowerCase().includes("firefox");
-}
+/** Determine if the current browser is FireFox */
+const isFirefox = () => {
+  if (window?.navigator?.userAgent) {
+    if (window.navigator.userAgent.toLowerCase().includes("firefox")) {
+      return true;
+    }
+  }
+
+  return false;
+};
 
 export interface AutoThemeProviderProps extends ThemeableElement<"div"> {
   /** Whether to automatically change the font and background color */
@@ -57,7 +63,7 @@ export const AutoThemeProvider = ({
 }: AutoThemeProviderProps) => {
   const isDark = useDarkMode();
   const colorScheme = propsColorScheme || (isDark ? "dark" : "light");
-  const theme = propsTheme || (isFirefox ? "firefox" : "chrome");
+  const theme = propsTheme || (isFirefox() ? "firefox" : "chrome");
   const style = {
     backgroundColor: all[theme][colorScheme].backgroundColor,
     color: all[theme][colorScheme].textColor,
