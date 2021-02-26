@@ -1,3 +1,19 @@
+# v1.0.3 (Thu Feb 25 2021)
+
+#### 🐛 Bug Fix
+
+- Fix theme generation bug [#17](https://github.com/intuit/devtools-ds/pull/17) ([@tylerkrupicka](https://github.com/tylerkrupicka))
+- fix ua parsing bug stopping theme generation ([@tylerkrupicka](https://github.com/tylerkrupicka))
+- Perf: Better Tree Shaking [#16](https://github.com/intuit/devtools-ds/pull/16) ([@tylerkrupicka](https://github.com/tylerkrupicka))
+- remove ua parser dep ([@tylerkrupicka](https://github.com/tylerkrupicka))
+- stop autothemeprovider from leaking dependencies ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### Authors: 1
+
+- Tyler Krupicka ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+---
+
 # v1.0.0 (Tue Feb 02 2021)
 
 #### 💥 Breaking Change

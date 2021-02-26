@@ -1,3 +1,18 @@
+# v1.0.3 (Thu Feb 25 2021)
+
+#### 🐛 Bug Fix
+
+- `@devtools-ds/themes`
+  - Fix theme generation bug [#17](https://github.com/intuit/devtools-ds/pull/17) ([@tylerkrupicka](https://github.com/tylerkrupicka))
+- `@devtools-ds/object-inspector`, `@devtools-ds/object-parser`, `@devtools-ds/port-controller`, `@devtools-ds/themes`
+  - Perf: Better Tree Shaking [#16](https://github.com/intuit/devtools-ds/pull/16) ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### Authors: 1
+
+- Tyler Krupicka ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+---
+
 # v1.0.2 (Mon Feb 15 2021)
 
 #### 🐛 Bug Fix
