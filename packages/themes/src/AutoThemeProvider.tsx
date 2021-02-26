@@ -1,7 +1,11 @@
 import React from "react";
-import { isFirefox } from "react-device-detect";
 import { all } from "./themes";
 import { ThemeableElement, ThemeContext } from "./utils";
+
+let isFirefox = false;
+if (window?.navigator?.userAgent) {
+  isFirefox = window.navigator.userAgent.toLowerCase().includes("firefox");
+}
 
 export interface AutoThemeProviderProps extends ThemeableElement<"div"> {
   /** Whether to automatically change the font and background color */

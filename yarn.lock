@@ -1706,7 +1706,7 @@
     react-merge-refs "^1.0.0"
 
 "@devtools-ds/icon@link:components/Icon":
-  version "1.0.1"
+  version "1.0.2"
   dependencies:
     "@babel/runtime" "7.7.2"
     "@design-systems/utils" "2.12.0"
@@ -1714,14 +1714,14 @@
     clsx "1.1.0"
 
 "@devtools-ds/node@link:components/Node":
-  version "1.0.1"
+  version "1.0.2"
   dependencies:
     "@babel/runtime" "7.7.2"
     "@devtools-ds/themes" "link:packages/themes"
     clsx "1.1.0"
 
 "@devtools-ds/object-inspector@link:components/ObjectInspector":
-  version "1.0.1"
+  version "1.0.2"
   dependencies:
     "@babel/runtime" "7.7.2"
     "@devtools-ds/object-parser" "link:packages/object-parser"
@@ -1730,25 +1730,24 @@
     clsx "1.1.0"
 
 "@devtools-ds/object-parser@link:packages/object-parser":
-  version "1.0.1"
+  version "1.0.2"
   dependencies:
     "@babel/runtime" "~7.5.4"
 
 "@devtools-ds/storybook-utils@link:packages/storybook-utils":
-  version "1.0.1"
+  version "1.0.2"
   dependencies:
     "@babel/runtime" "~7.5.4"
 
 "@devtools-ds/themes@link:packages/themes":
-  version "1.0.1"
+  version "1.0.2"
   dependencies:
     "@babel/runtime" "~7.5.4"
     "@design-systems/utils" "2.12.0"
     clsx "1.1.0"
-    react-device-detect "1.15.0"
 
 "@devtools-ds/tree@link:components/Tree":
-  version "1.0.1"
+  version "1.0.2"
   dependencies:
     "@babel/runtime" "7.7.2"
     "@devtools-ds/themes" "link:packages/themes"
@@ -17362,13 +17361,6 @@ react-dev-utils@^10.0.0:
     strip-ansi "6.0.0"
     text-table "0.2.0"
 
-react-device-detect@1.15.0:
-  version "1.15.0"
-  resolved "https://registry.yarnpkg.com/react-device-detect/-/react-device-detect-1.15.0.tgz#5321f94ae3c4d51ef399b0502a6c739e32d0f315"
-  integrity sha512-ywjtWW04U7vaJK87IAFHhKozZhTPeDVWsfYx5CxQSQCjU5+fnMMxWZt9HnVWaNTqBEn6g8wCNWyqav7sXJrURg==
-  dependencies:
-    ua-parser-js "^0.7.23"
-
 react-docgen-typescript-plugin@^0.6.2:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/react-docgen-typescript-plugin/-/react-docgen-typescript-plugin-0.6.3.tgz#664b22601df083597ecb1e60bd21beca60125fdf"
@@ -20606,7 +20598,7 @@ typical@^5.0.0, typical@^5.2.0:
   resolved "https://registry.yarnpkg.com/typical/-/typical-5.2.0.tgz#4daaac4f2b5315460804f0acf6cb69c52bb93066"
   integrity sha512-dvdQgNDNJo+8B2uBQoqdb11eUCE1JQXhvjC/CZtgvZseVd5TYMXnq0+vuUemXbd/Se29cTaUuPX3YIc2xgbvIg==
 
-ua-parser-js@^0.7.18, ua-parser-js@^0.7.21, ua-parser-js@^0.7.23:
+ua-parser-js@^0.7.18, ua-parser-js@^0.7.21:
   version "0.7.23"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.23.tgz#704d67f951e13195fbcd3d78818577f5bc1d547b"
   integrity sha512-m4hvMLxgGHXG3O3fQVAyyAQpZzDOvwnhOTjYz5Xmr7r/+LpkNy3vJXdVRWgd1TkAb7NGROZuSy96CrlNVjA7KA==
