@@ -14,6 +14,7 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
+  "sideEffects": false,
   "scripts": {
     "clean": "ds clean",
     "build": "ds build",
@@ -34,8 +35,7 @@
   "dependencies": {
     "@babel/runtime": "~7.5.4",
     "@design-systems/utils": "2.12.0",
-    "clsx": "1.1.0",
-    "react-device-detect": "1.15.0"
+    "clsx": "1.1.0"
   },
   "peerDependencies": {
     "react": ">= 16.8.6"
