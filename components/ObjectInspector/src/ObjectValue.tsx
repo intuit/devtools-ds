@@ -164,15 +164,6 @@ export const ObjectValue = (props: ObjectValueProps) => {
         showKey,
         ast.depth
       );
-    } else if (typeof Buffer !== "undefined" && Buffer.isBuffer(ast.value)) {
-      // Buffer
-      value = buildValue(
-        ast.key,
-        `Buffer[${ast.value.length}]`,
-        styles.value,
-        showKey,
-        ast.depth
-      );
     } else if (isObject(ast.value)) {
       // Object
       value = buildValue(ast.key, "{…}", styles.key, showKey, ast.depth);
