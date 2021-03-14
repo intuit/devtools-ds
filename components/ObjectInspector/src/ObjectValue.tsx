@@ -188,19 +188,6 @@ export const ObjectValue = (props: ObjectValueProps) => {
         name,
         ast.depth
       );
-<<<<<<< HEAD
-=======
-    } else if (typeof Buffer !== "undefined" && Buffer.isBuffer(ast.value)) {
-      // Buffer
-      value = buildValue(
-        ast.key,
-        `Buffer[${ast.value.length}]`,
-        styles.value,
-        showKey,
-        name,
-        ast.depth
-      );
->>>>>>> Add name, fix colon styling
     } else if (isObject(ast.value)) {
       // Object
       value = buildValue(ast.key, "{…}", styles.key, showKey, name, ast.depth);
