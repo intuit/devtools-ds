@@ -3,14 +3,14 @@ import { all } from "./themes";
 import { ThemeableElement, ThemeContext } from "./utils";
 
 /** Determine if the current browser is FireFox */
-const isFirefox = () => {
+export const getBrowserTheme = () => {
   if (window?.navigator?.userAgent) {
     if (window.navigator.userAgent.toLowerCase().includes("firefox")) {
-      return true;
+      return "firefox";
     }
   }
 
-  return false;
+  return "chrome";
 };
 
 export interface AutoThemeProviderProps extends ThemeableElement<"div"> {
@@ -63,7 +63,7 @@ export const AutoThemeProvider = ({
 }: AutoThemeProviderProps) => {
   const isDark = useDarkMode();
   const colorScheme = propsColorScheme || (isDark ? "dark" : "light");
-  const theme = propsTheme || (isFirefox() ? "firefox" : "chrome");
+  const theme = propsTheme || getBrowserTheme();
   const style = {
     backgroundColor: all[theme][colorScheme].backgroundColor,
     color: all[theme][colorScheme].textColor,
