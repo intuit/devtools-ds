@@ -114,7 +114,7 @@ export const HeadCell = (props: Element<"th">) => {
 
   /** Enable resizing and set defaults when click starts */
   const mouseDownHandler = (e: React.MouseEvent) => {
-    if (!window || !headRef.current) return;
+    if (typeof window === "undefined" || !headRef.current) return;
     const s = window.getComputedStyle(headRef.current);
     setWidth(parseInt(s.width, 10));
     setStartingX(e.clientX);

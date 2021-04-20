@@ -2,9 +2,11 @@ import React from "react";
 import { all } from "./themes";
 import { ThemeableElement, ThemeContext } from "./utils";
 
+const isWindowDefined = typeof window !== "undefined";
+
 /** Determine if the current browser is FireFox */
 const isFirefox = () => {
-  if (window?.navigator?.userAgent) {
+  if (isWindowDefined && window?.navigator?.userAgent) {
     if (window.navigator.userAgent.toLowerCase().includes("firefox")) {
       return true;
     }
@@ -26,11 +28,13 @@ export interface AutoThemeProviderProps extends ThemeableElement<"div"> {
  */
 const useDarkMode = () => {
   const [darkMode, setDarkMode] = React.useState(
-    window ? window.matchMedia("(prefers-color-scheme: dark)").matches : false
+    isWindowDefined && window
+      ? window.matchMedia("(prefers-color-scheme: dark)").matches
+      : false
   );
 
   React.useEffect(() => {
-    if (!window) {
+    if (!isWindowDefined) {
       return;
     }
 
