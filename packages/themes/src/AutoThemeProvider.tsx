@@ -5,7 +5,7 @@ import { ThemeableElement, ThemeContext } from "./utils";
 const isWindowDefined = typeof window !== "undefined";
 
 /** Determine if the current browser is FireFox */
-const isFirefox = () => {
+export const isFirefox = () => {
   if (isWindowDefined && window?.navigator?.userAgent) {
     if (window.navigator.userAgent.toLowerCase().includes("firefox")) {
       return true;

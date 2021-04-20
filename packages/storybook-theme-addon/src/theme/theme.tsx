@@ -40,7 +40,7 @@ const STORAGE_TOKEN = `${THEME_SELECT_TOOL_ID}-storage`;
 
 /** Persist the theme settings in localStorage */
 const saveLocalStorage = (data: State) => {
-  if (typeof window === "undefined") {
+  if (!isWindowDefined) {
     return;
   }
 
@@ -49,10 +49,9 @@ const saveLocalStorage = (data: State) => {
 
 /** Restore theme settings from localStorage */
 const restoreLocalStorage = (defaultTheme?: Partial<State>): State => {
-  const data =
-    typeof window === "undefined"
-      ? undefined
-      : window.localStorage.getItem(STORAGE_TOKEN);
+  const data = isWindowDefined
+    ? window.localStorage.getItem(STORAGE_TOKEN)
+    : undefined;
 
   if (data) {
     const storedTheme = JSON.parse(data) as State;
