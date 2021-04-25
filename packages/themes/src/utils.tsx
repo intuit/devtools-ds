@@ -8,6 +8,8 @@ export type ColorScheme = typeof colorSchemes[number];
 export const themes = ["chrome", "firefox"] as const;
 export type Theme = typeof themes[number];
 
+const isWindowDefined = typeof window !== "undefined";
+
 /**
  * Get all of the props for an HTML element + add the theme props.
  * Used to easily type the rest props of a component and add theming.
@@ -40,11 +42,13 @@ export const ThemeContext = React.createContext<Themeable>({
  */
 const useDarkMode = () => {
   const [darkMode, setDarkMode] = React.useState(
-    window ? window.matchMedia("(prefers-color-scheme: dark)").matches : false
+    isWindowDefined && window
+      ? window.matchMedia("(prefers-color-scheme: dark)").matches
+      : false
   );
 
   React.useEffect(() => {
-    if (!window) {
+    if (!isWindowDefined) {
       return;
     }
 

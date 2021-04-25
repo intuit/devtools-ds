@@ -13,6 +13,8 @@ import FireFox from "./icons/firefox";
 
 import { THEME_SELECT_TOOL_ID, PARAMETER_NAME } from "../constants";
 
+const isWindowDefined = typeof window !== "undefined";
+
 interface TooltipProps {
   /** Called when the tooltip hides */
   onHide: () => void;
@@ -38,12 +40,18 @@ const STORAGE_TOKEN = `${THEME_SELECT_TOOL_ID}-storage`;
 
 /** Persist the theme settings in localStorage */
 const saveLocalStorage = (data: State) => {
+  if (!isWindowDefined) {
+    return;
+  }
+
   window.localStorage.setItem(STORAGE_TOKEN, JSON.stringify(data));
 };
 
 /** Restore theme settings from localStorage */
 const restoreLocalStorage = (defaultTheme?: Partial<State>): State => {
-  const data = window.localStorage.getItem(STORAGE_TOKEN);
+  const data = isWindowDefined
+    ? window.localStorage.getItem(STORAGE_TOKEN)
+    : undefined;
 
   if (data) {
     const storedTheme = JSON.parse(data) as State;
