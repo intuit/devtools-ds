@@ -1,3 +1,20 @@
+# v1.0.4 (Sun Apr 25 2021)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie)), for all your work!
+
+#### 🐛 Bug Fix
+
+- `@devtools-ds/table`, `@devtools-ds/storybook-theme-addon`, `@devtools-ds/themes`
+  - Fix: Make Components Work with SSR [#18](https://github.com/intuit/devtools-ds/pull/18) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v1.0.3 (Thu Feb 25 2021)
 
 #### 🐛 Bug Fix
