@@ -2,6 +2,7 @@ import React from "react";
 import makeClass from "clsx";
 import {
   Tabs,
+  TabsProps,
   TabList as ReachTabList,
   Tab as ReachTab,
   TabPanels,
@@ -14,8 +15,21 @@ import { styled, Element } from "@design-systems/utils";
 import styles from "./Navigation.css";
 
 /** The top-nav in devtools */
-export const Navigation = (props: ThemeableElement<"nav">) => {
-  const { children, className, theme, colorScheme, ...html } = props;
+export const Navigation = (
+  props: ThemeableElement<"nav"> & Omit<TabsProps, "keyboardActivation">
+) => {
+  const {
+    children,
+    className,
+    theme,
+    colorScheme,
+    index,
+    readOnly,
+    defaultIndex,
+    orientation,
+    onChange,
+    ...html
+  } = props;
 
   const { themeClass, currentTheme } = useTheme({ theme, colorScheme }, styles);
 
@@ -29,7 +43,16 @@ export const Navigation = (props: ThemeableElement<"nav">) => {
         styles[currentTheme]
       )}
     >
-      <Tabs keyboardActivation={TabsKeyboardActivation.Manual}>{children}</Tabs>
+      <Tabs
+        keyboardActivation={TabsKeyboardActivation.Manual}
+        index={index}
+        readOnly={readOnly}
+        defaultIndex={defaultIndex}
+        orientation={orientation}
+        onChange={onChange}
+      >
+        {children}
+      </Tabs>
     </nav>
   );
 };
