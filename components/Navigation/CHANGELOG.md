@@ -1,3 +1,19 @@
+# v1.1.0 (Thu May 06 2021)
+
+#### 🚀 Enhancement
+
+- forward tab props [#19](https://github.com/intuit/devtools-ds/pull/19) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### 🐛 Bug Fix
+
+- forward tab props ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v1.0.2 (Mon Feb 15 2021)
 
 #### 🐛 Bug Fix

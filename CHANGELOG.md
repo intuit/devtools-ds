@@ -1,3 +1,16 @@
+# v1.1.0 (Thu May 06 2021)
+
+#### 🚀 Enhancement
+
+- `@devtools-ds/navigation`
+  - forward tab props [#19](https://github.com/intuit/devtools-ds/pull/19) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v1.0.4 (Sun Apr 25 2021)
 
 :tada: This release contains work from a new contributor! :tada:
