@@ -1,3 +1,20 @@
+# v1.1.1 (Fri May 07 2021)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Adam Dierkens ([@adierkens](https://github.com/adierkens)), for all your work!
+
+#### 🐛 Bug Fix
+
+- `@devtools-ds/object-parser`
+  - Increase maximum parse depth for larger JSON objects [#20](https://github.com/intuit/devtools-ds/pull/20) ([@adierkens](https://github.com/adierkens))
+
+#### Authors: 1
+
+- Adam Dierkens ([@adierkens](https://github.com/adierkens))
+
+---
+
 # v1.1.0 (Thu May 06 2021)
 
 #### 🚀 Enhancement
