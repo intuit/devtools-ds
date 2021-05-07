@@ -266,7 +266,7 @@ const buildAST = async (
     parent: undefined,
   };
 
-  if (value && isKnownObject(value) && depth < 10) {
+  if (value && isKnownObject(value) && depth < 100) {
     const children = [];
     let t: ObjectTypes = "object";
 
