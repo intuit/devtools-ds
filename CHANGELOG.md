@@ -1,3 +1,16 @@
+# v1.1.2 (Sat May 08 2021)
+
+#### 🐛 Bug Fix
+
+- `@devtools-ds/navigation`
+  - handle controls overflow for small screens [#21](https://github.com/intuit/devtools-ds/pull/21) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v1.1.1 (Fri May 07 2021)
 
 :tada: This release contains work from a new contributor! :tada:

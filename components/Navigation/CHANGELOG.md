@@ -1,3 +1,16 @@
+# v1.1.2 (Sat May 08 2021)
+
+#### 🐛 Bug Fix
+
+- handle controls overflow for small screens [#21](https://github.com/intuit/devtools-ds/pull/21) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- handle controls overflow for small screens ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v1.1.0 (Thu May 06 2021)
 
 #### 🚀 Enhancement
