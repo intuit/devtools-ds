@@ -215,3 +215,53 @@ export const Overflow = () => {
     </Table>
   );
 };
+
+export const HeightOverflow = () => {
+  const ROWS = [
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "night",
+    "ten",
+    "eleven",
+    "twelve",
+  ];
+
+  return (
+    <div style={{ maxHeight: "200px", overflow: "scroll" }}>
+      <Table>
+        <Table.Head>
+          <Table.Row>
+            <Table.HeadCell style={{ width: "10%" }}>Status</Table.HeadCell>
+            <Table.HeadCell style={{ width: "10%" }}>Method</Table.HeadCell>
+            <Table.HeadCell>Domain</Table.HeadCell>
+            <Table.HeadCell>Transferred</Table.HeadCell>
+          </Table.Row>
+        </Table.Head>
+        <Table.Body>
+          <Table.Row id="one">
+            <Table.Cell>200</Table.Cell>
+            <Table.Cell>GET</Table.Cell>
+            <Table.Cell>
+              This is some really long text that has spaces so it should break
+              in theory.
+            </Table.Cell>
+            <Table.Cell>This_is_a_longer_value_which_wont_break_</Table.Cell>
+          </Table.Row>
+          {ROWS.map((row) => (
+            <Table.Row id={row}>
+              <Table.Cell>301</Table.Cell>
+              <Table.Cell>GET</Table.Cell>
+              <Table.Cell>localhost:6006</Table.Cell>
+              <Table.Cell>0.2 KB</Table.Cell>
+            </Table.Row>
+          ))}
+        </Table.Body>
+      </Table>
+    </div>
+  );
+};

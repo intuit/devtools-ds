@@ -13,6 +13,10 @@
 .table-head {
   background-color: @theme headBackgroundColor;
   text-align: left;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 1px 0 0px @theme borderColor,
+    0px -1px 0 0px @theme borderColor;
 }
 
 .cell-head {
