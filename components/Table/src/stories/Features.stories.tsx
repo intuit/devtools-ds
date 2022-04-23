@@ -232,7 +232,12 @@ export const HeightOverflow = () => {
   ];
 
   return (
-    <div style={{ maxHeight: "200px", overflow: "scroll" }}>
+    <div
+      style={{
+        height: "100px",
+        overflowY: "auto",
+      }}
+    >
       <Table>
         <Table.Head>
           <Table.Row>
@@ -253,7 +258,7 @@ export const HeightOverflow = () => {
             <Table.Cell>This_is_a_longer_value_which_wont_break_</Table.Cell>
           </Table.Row>
           {ROWS.map((row) => (
-            <Table.Row id={row}>
+            <Table.Row key={row} id={row}>
               <Table.Cell>301</Table.Cell>
               <Table.Cell>GET</Table.Cell>
               <Table.Cell>localhost:6006</Table.Cell>

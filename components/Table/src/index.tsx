@@ -51,7 +51,14 @@ export const Table = (props: TableProps) => {
 
   // Perform any side effect with those sizes!
   React.useEffect(() => {
-    if (sizes.height) setHeight(sizes.height);
+    const parentHeight = tableRef.current?.parentElement?.getBoundingClientRect()
+      .height;
+    if (sizes.height && parentHeight) {
+      setHeight(Math.min(sizes.height, parentHeight));
+    } else if (sizes.height) {
+      setHeight(sizes.height);
+    }
+
     if (sizes.width) setWidth(sizes.width);
   }, [sizes.height, sizes.width]);
 
