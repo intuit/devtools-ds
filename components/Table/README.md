@@ -75,6 +75,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://tylerkrupicka.com/"><img src="https://avatars.githubusercontent.com/u/5761061?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tyler Krupicka</b></sub></a><br /><a href="https://github.com/design-systems/devtools-ds/commits?author=tylerkrupicka" title="Documentation">📖</a> <a href="#design-tylerkrupicka" title="Design">🎨</a> <a href="https://github.com/design-systems/devtools-ds/commits?author=tylerkrupicka" title="Code">💻</a> <a href="#example-tylerkrupicka" title="Examples">💡</a> <a href="https://github.com/design-systems/devtools-ds/commits?author=tylerkrupicka" title="Tests">⚠️</a></td>
     <td align="center"><a href="http://hipstersmoothie.com/"><img src="https://avatars.githubusercontent.com/u/1192452?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrew Lisowski</b></sub></a><br /><a href="https://github.com/design-systems/devtools-ds/commits?author=hipstersmoothie" title="Code">💻</a></td>
+    <td align="center"><a href="http://adrian.delarosab.me/"><img src="https://avatars.githubusercontent.com/u/1523379?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adrian de la Rosa</b></sub></a><br /><a href="https://github.com/design-systems/devtools-ds/commits?author=mormubis" title="Documentation">📖</a> <a href="#example-mormubis" title="Examples">💡</a> <a href="https://github.com/design-systems/devtools-ds/commits?author=mormubis" title="Code">💻</a></td>
   </tr>
 </table>
 
