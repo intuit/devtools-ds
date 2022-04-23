@@ -1,3 +1,24 @@
+# v1.2.0 (Fri Apr 22 2022)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Adrian de la Rosa ([@mormubis](https://github.com/mormubis)), for all your work!
+
+#### 🚀 Enhancement
+
+- table: make the header sticky [#23](https://github.com/intuit/devtools-ds/pull/23) ([@mormubis](https://github.com/mormubis) [@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### 🐛 Bug Fix
+
+- css magic to fix sticky header borders in FF ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### Authors: 2
+
+- Adrian de la Rosa ([@mormubis](https://github.com/mormubis))
+- Tyler Krupicka ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+---
+
 # v1.0.4 (Sun Apr 25 2021)
 
 :tada: This release contains work from a new contributor! :tada:

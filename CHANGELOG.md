@@ -1,3 +1,26 @@
+# v1.2.0 (Fri Apr 22 2022)
+
+:tada: This release contains work from a new contributor! :tada:
+
+Thank you, Adrian de la Rosa ([@mormubis](https://github.com/mormubis)), for all your work!
+
+#### 🚀 Enhancement
+
+- `@devtools-ds/table`, `@devtools-ds/storybook-theme-addon`, `@devtools-ds/themes`
+  - table: make the header sticky [#23](https://github.com/intuit/devtools-ds/pull/23) ([@mormubis](https://github.com/mormubis) [@tylerkrupicka](https://github.com/tylerkrupicka))
+
+#### 🐛 Bug Fix
+
+- `@devtools-ds/table`
+  - feat(table): sticky header [#22](https://github.com/intuit/devtools-ds/pull/22) ([@mormubis](https://github.com/mormubis))
+
+#### Authors: 2
+
+- Adrian de la Rosa ([@mormubis](https://github.com/mormubis))
+- Tyler Krupicka ([@tylerkrupicka](https://github.com/tylerkrupicka))
+
+---
+
 # v1.1.2 (Sat May 08 2021)
 
 #### 🐛 Bug Fix
