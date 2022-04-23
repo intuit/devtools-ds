@@ -40,7 +40,7 @@ export const ThemeContext = React.createContext<Themeable>({
  * Determine if the user has a "prefers-color-scheme" mode enabled in their browser.
  * This is helpful for detecting if a user prefers dark mode.
  */
-const useDarkMode = () => {
+export const useDarkMode = () => {
   const [darkMode, setDarkMode] = React.useState(
     isWindowDefined && window
       ? window.matchMedia("(prefers-color-scheme: dark)").matches

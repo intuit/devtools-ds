@@ -2,7 +2,6 @@
   width: 100%;
   table-layout: fixed;
   font-family: sans-serif;
-  border-collapse: collapse;
   color: @theme textColor;
 
   &:last-child {
@@ -15,14 +14,15 @@
   text-align: left;
   position: sticky;
   top: 0;
-  box-shadow: 0 1px 0 0 @theme borderColor, 0 -1px 0 0 @theme borderColor;
+  box-shadow: inset 0 1px 0 0 @theme borderColor,
+    inset 0 -1px 0 0 @theme borderColor, inset -1px 0 0 0 @theme borderColor,
+    inset 1px 0 0 0 @theme borderColor;
 }
 
 .cell-head {
   padding: 5px;
   position: relative;
-  border: 1px solid @theme borderColor;
-  border-bottom: 0;
+  border-right: 1px solid @theme borderColor;
   font-weight: 400;
   min-width: 40px;
 
