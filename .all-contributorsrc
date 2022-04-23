@@ -78,6 +78,15 @@
         "example",
         "code"
       ]
+    },
+    {
+      "login": "mormubis",
+      "name": "Adrian de la Rosa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1523379?v=4",
+      "profile": "http://adrian.delarosab.me/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 6

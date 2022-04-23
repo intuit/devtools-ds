@@ -158,7 +158,7 @@ export const ThemeDecorator = (
     >
       <div
         className={`theme-wrapper ${loadedState.colorScheme}`}
-        style={{ backgroundColor, color, minHeight: "100%", padding: "20px" }}
+        style={{ backgroundColor, color, minHeight: "90%", padding: "20px" }}
       >
         {storyFn({ args: loadedState })}
       </div>
