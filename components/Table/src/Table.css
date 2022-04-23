@@ -13,18 +13,16 @@
 .table-head {
   background-color: @theme headBackgroundColor;
   text-align: left;
-  position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
-  box-shadow: 0px 1px 0 0px @theme borderColor,
-    0px -1px 0 0px @theme borderColor;
+  box-shadow: 0 1px 0 0 @theme borderColor, 0 -1px 0 0 @theme borderColor;
 }
 
 .cell-head {
   padding: 5px;
   position: relative;
   border: 1px solid @theme borderColor;
-  border-bottom: 0px;
+  border-bottom: 0;
   font-weight: 400;
   min-width: 40px;
 
