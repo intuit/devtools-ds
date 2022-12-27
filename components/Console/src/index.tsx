@@ -47,7 +47,7 @@ export type ExecuteFunction = (expression: string) => void;
 
 /** A Component that renders an expression and it's result in a list */
 const ConsoleResult = (props: ConsoleExpression & ResultComponent) => {
-  const ResultComponent = props.resultComponent;
+  const ResultComponentProp = props.resultComponent;
   const isError = props.result instanceof Error || props.severity === "error";
   const isWarning = !isError && props.severity === "warning";
   let Icon = ConsoleResultIcon;
@@ -68,7 +68,7 @@ const ConsoleResult = (props: ConsoleExpression & ResultComponent) => {
       >
         <Icon inline className={styles.icon} />
         <div className={styles.resultText}>
-          <ResultComponent result={props.result} />
+          <ResultComponentProp result={props.result} />
         </div>
       </div>
     </li>
