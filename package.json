@@ -39,7 +39,7 @@
     "html-webpack-plugin": "4.5.0"
   },
   "dependencies": {
-    "@design-systems/cli": "2.12.0",
+    "@design-systems/cli": "4.15.2",
     "@testing-library/react": "11.0.4",
     "@types/react-dom": "16.9.8",
     "babel-loader": "8.1.0",
