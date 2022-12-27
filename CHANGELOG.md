@@ -1,3 +1,16 @@
+# v1.2.1 (Tue Dec 27 2022)
+
+#### 🐛 Bug Fix
+
+- `@devtools-ds/console`
+  - upgrade design systems cli [#26](https://github.com/intuit/devtools-ds/pull/26) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v1.2.0 (Fri Apr 22 2022)
 
 :tada: This release contains work from a new contributor! :tada:

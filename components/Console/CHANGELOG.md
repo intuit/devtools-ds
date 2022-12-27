@@ -1,3 +1,16 @@
+# v1.2.1 (Tue Dec 27 2022)
+
+#### 🐛 Bug Fix
+
+- upgrade design systems cli [#26](https://github.com/intuit/devtools-ds/pull/26) ([@hipstersmoothie](https://github.com/hipstersmoothie))
+- fix lint ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+#### Authors: 1
+
+- Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothie))
+
+---
+
 # v1.0.2 (Mon Feb 15 2021)
 
 #### 🐛 Bug Fix
