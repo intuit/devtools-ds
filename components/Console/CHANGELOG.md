@@ -87,12 +87,12 @@
 
 #### 🐛 Bug Fix
 
-- Bump version to: v0.130.1 \[skip ci\] (tylerkrupicka@gmail.com)
+- Bump version to: v0.130.1 \[skip ci\] (https://github.com/tylerkrupicka)
 
 #### ⚠️ Pushed to `master`
 
-- set access in package json (tylerkrupicka@gmail.com)
+- set access in package json (https://github.com/tylerkrupicka)
 
 #### Authors: 1
 
-- Tyler Krupicka (tylerkrupicka@gmail.com)
+- Tyler Krupicka (https://github.com/tylerkrupicka)
