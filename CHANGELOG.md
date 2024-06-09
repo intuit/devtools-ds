@@ -172,11 +172,11 @@ Thank you, Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothi
 #### ⚠️ Pushed to `master`
 
 - `@devtools-ds/create`
-  - add initial org (tylerkrupicka@gmail.com)
+  - add initial org (https://github.com/tylerkrupicka)
 
 #### Authors: 1
 
-- Tyler Krupicka (tylerkrupicka@gmail.com)
+- Tyler Krupicka (https://github.com/tylerkrupicka)
 
 ---
 
@@ -321,18 +321,18 @@ Thank you, Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothi
 
 #### ⚠️ Pushed to `master`
 
-- update npmrc (tylerkrupicka@gmail.com)
-- remove verbose logging (tylerkrupicka@gmail.com)
-- update npm url (tylerkrupicka@gmail.com)
-- remove registry from lerna (tylerkrupicka@gmail.com)
-- release to npm (tylerkrupicka@gmail.com)
+- update npmrc (https://github.com/tylerkrupicka)
+- remove verbose logging (https://github.com/tylerkrupicka)
+- update npm url (https://github.com/tylerkrupicka)
+- remove registry from lerna (https://github.com/tylerkrupicka)
+- release to npm (https://github.com/tylerkrupicka)
 - `@devtools-ds/console`, `@devtools-ds/dom-inspector`, `@devtools-ds/diagnostic`, `@devtools-ds/icon`, `@devtools-ds/navigation`, `@devtools-ds/node`, `@devtools-ds/object-inspector`, `@devtools-ds/table`, `@devtools-ds/tree`, `@devtools-ds/docs`, `@devtools-ds/object-parser`, `@devtools-ds/storybook-theme-addon`, `@devtools-ds/storybook-utils`, `@devtools-ds/themes`
-  - set access in package json (tylerkrupicka@gmail.com)
+  - set access in package json (https://github.com/tylerkrupicka)
 
 #### 📝 Documentation
 
-- Pages [#2](https://github.com/intuit/devtools-ds/pull/2) (tylerkrupicka@gmail.com)
-- Circleci Setup [#1](https://github.com/intuit/devtools-ds/pull/1) (tylerkrupicka@gmail.com)
+- Pages [#2](https://github.com/intuit/devtools-ds/pull/2) (https://github.com/tylerkrupicka)
+- Circleci Setup [#1](https://github.com/intuit/devtools-ds/pull/1) (https://github.com/tylerkrupicka)
 
 #### Authors: 1
 
@@ -344,16 +344,16 @@ Thank you, Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothi
 
 #### ⚠️ Pushed to `master`
 
-- update npmrc (tylerkrupicka@gmail.com)
-- remove verbose logging (tylerkrupicka@gmail.com)
-- update npm url (tylerkrupicka@gmail.com)
-- remove registry from lerna (tylerkrupicka@gmail.com)
-- release to npm (tylerkrupicka@gmail.com)
+- update npmrc (https://github.com/tylerkrupicka)
+- remove verbose logging (https://github.com/tylerkrupicka)
+- update npm url (https://github.com/tylerkrupicka)
+- remove registry from lerna (https://github.com/tylerkrupicka)
+- release to npm (https://github.com/tylerkrupicka)
 
 #### 📝 Documentation
 
-- Pages [#2](https://github.com/intuit/devtools-ds/pull/2) (tylerkrupicka@gmail.com)
-- Circleci Setup [#1](https://github.com/intuit/devtools-ds/pull/1) (tylerkrupicka@gmail.com)
+- Pages [#2](https://github.com/intuit/devtools-ds/pull/2) (https://github.com/tylerkrupicka)
+- Circleci Setup [#1](https://github.com/intuit/devtools-ds/pull/1) (https://github.com/tylerkrupicka)
 
 #### Authors: 1
 
@@ -365,16 +365,16 @@ Thank you, Andrew Lisowski ([@hipstersmoothie](https://github.com/hipstersmoothi
 
 #### ⚠️ Pushed to `master`
 
-- update npmrc (tylerkrupicka@gmail.com)
-- remove verbose logging (tylerkrupicka@gmail.com)
-- update npm url (tylerkrupicka@gmail.com)
-- remove registry from lerna (tylerkrupicka@gmail.com)
-- release to npm (tylerkrupicka@gmail.com)
+- update npmrc (https://github.com/tylerkrupicka)
+- remove verbose logging (https://github.com/tylerkrupicka)
+- update npm url (https://github.com/tylerkrupicka)
+- remove registry from lerna (https://github.com/tylerkrupicka)
+- release to npm (https://github.com/tylerkrupicka)
 
 #### 📝 Documentation
 
-- Pages [#2](https://github.com/intuit/devtools-ds/pull/2) (tylerkrupicka@gmail.com)
-- Circleci Setup [#1](https://github.com/intuit/devtools-ds/pull/1) (tylerkrupicka@gmail.com)
+- Pages [#2](https://github.com/intuit/devtools-ds/pull/2) (https://github.com/tylerkrupicka)
+- Circleci Setup [#1](https://github.com/intuit/devtools-ds/pull/1) (https://github.com/tylerkrupicka)
 
 #### Authors: 1
 

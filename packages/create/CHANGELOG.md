@@ -48,11 +48,11 @@
 
 #### ⚠️ Pushed to `master`
 
-- add initial org (tylerkrupicka@gmail.com)
+- add initial org (https://github.com/tylerkrupicka)
 
 #### Authors: 1
 
-- Tyler Krupicka (tylerkrupicka@gmail.com)
+- Tyler Krupicka (https://github.com/tylerkrupicka)
 
 ---
 
